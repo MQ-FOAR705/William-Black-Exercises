@@ -8,8 +8,9 @@
 \graphicspath{ {./PoC Scoping Exercise/} }
 \usepackage{scrextend}
 
+
 \title{\textbf{Learning Journal}}
-\date{\today}
+\date{Date of last edit: \today}
 \author{William Black 42920477}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.5em}
@@ -23,27 +24,29 @@
 }
  
 \urlstyle{same}
- 
+
 \begin{document}
-    \maketitle\textbf{\large{11.08.19 – Scoping Exercise I}}\par
+
+\tableofcontents
+
+\newpage\section{11.08.19 - Scoping Exercise I}
 
 Doing the Scoping Exercise first because the other task is recommended to be tackled in groups.
 
 Time to find out how to use LaTeX.
 
+\subsection{LaTeX}
+
 First learning journal will be in Word since I don’t know how to use LaTeX yet.
 
 Brian said to work in Rich Text and watch it come out perfectly on the right.
 
+\subsubsection{\underline{Rich Text Mode Errors:}}\label{error:er1}
 \begin{itemize}
-\renewcommand{\labelitemi}{$\nobullet$}
-\item \underline{Problems:}
-\renewcommand{\labelitemi}{$\bullet$}
-    \item It does not come out perfectly on the right at all
+    \item Rich text mode in Overleaf does not come out perfectly on the right at all
     \item Sometimes code appears on the Rich Text version of the left
     \item The rich text options are extremely limited, it seems to just be bold, underline, bullet lists, and nothing else
 \end{itemize}
-
 \begin{itemize}
 \renewcommand{\labelitemi}{$\nobullet$}
 \item \underline{Solution:}
@@ -59,10 +62,8 @@ Replacing parts of the tutorial result to reflect my Scoping Exercise.
 
 Worked out using $\backslash$date\{$\backslash$today\} instead of typing out the date, magic!
 
+\subsubsection{\underline{Bullet List Errors:}}\label{error:er2}
 \begin{itemize}
-\renewcommand{\labelitemi}{$\nobullet$}
-\item \underline{Problem:}
-\renewcommand{\labelitemi}{$\bullet$}
     \item Can’t work out how to make nested bullets.
 \end{itemize}
 \begin{itemize}
@@ -78,10 +79,8 @@ I’m numbering the parts of my methodology, including the writing process and t
 
 \href{http://www.rpi.edu/dept/arc/training/latex/LaTeX_symbols.pdf}{This .pdf} is a list of different symbols I can use. 
 
+\subsubsection{\underline{Package Errors:}}\label{error:er3}
 \begin{itemize}
-\renewcommand{\labelitemi}{$\nobullet$}
-\item \underline{Problem:}
-\renewcommand{\labelitemi}{$\bullet$}
     \item Not working. Some of them work but most of them don’t.
 \end{itemize}
 \begin{itemize}
@@ -97,10 +96,8 @@ Just realised I have to write gains and gain creators too, and I have the perfec
 I kind of feel like some sort of genius hacker using LaTeX but my brain is starting to hurt, I’ve been fiddling around with the source editor for a few hours now.
 There’s an option to collapse lists at the line numbers when you’re done writing them. It’s much easier to read. I’ve also realised I can separate the lines with single line breaks and nothing changes in the result, which also makes the code much more readable.
 
+\subsubsection{\underline{Right Alignment Errors:}}\label{error:er4}
 \begin{itemize}
-\renewcommand{\labelitemi}{$\nobullet$}
-\item \underline{Problem:}
-\renewcommand{\labelitemi}{$\bullet$}
     \item Even with \href{https://www.overleaf.com/learn/latex/Text_alignment#Right-justified_text}{a tutorial} I can’t make a package work to allow me to make the date right-aligned and smaller.
 \end{itemize}
 \begin{itemize}
@@ -116,10 +113,9 @@ But now it looks like I can change the format of the title, so that’s not the 
 
 Came across \href{https://www.overleaf.com/learn/latex/Paragraph_formatting#Reference_guide}{this tutorial} that tells me how to fix the automatic indenting. Looks nicer without it.
 
+
+\subsubsection{\underline{Document Style Errors:}}\label{error:er5}
 \begin{itemize}
-\renewcommand{\labelitemi}{$\nobullet$}
-\item \underline{Problem:}
-\renewcommand{\labelitemi}{$\bullet$}
     \item The margins look kind of insane, they’re like two inches wide, and for some reason they’re even wider on only the second page. The first and third page look normal though.
 \end{itemize}
 \begin{itemize}
@@ -139,13 +135,18 @@ Submitted the .tex file to Cloudstor, the .pdf to Turnitin.
 
 Fingers crossed that next week’s task will take less than 6 hours now I’m more familiar with the program.
 
+\subsection{Business Analysis: Pains and Gains}
+The jobs involved in writing the project come down to methodology: Data collection; Contrastive linguistic comparison; Structural linguistic analysis; Writing the thesis. I wouldn't normally put a bibliography in there but since it's the one that keeps coming up as the example I can sense that this might end up being a relatively easy fallback for most students.
+
+The pains and gains are tough to separate, obviously avoiding pain is a gain in itself.
+
+There's no way for me to know whether any of these pain relievers/gain creators are possible to create programs for but this is apparently only to brainstorm, so we are pretending we live in a semi-magic world where small magics are possible, but not magic that's big enough to just do the entire thesis for me. Harry Potter rules.
+
 \newpage
-    \maketitle\textbf{\large{12.08.19 – Data Carpentry: Spreadsheets I, II}}\par
+\section{12.08.19 - Data Carpentry}
 Since yesterday’s task was so surprisingly complicated, I might see how I do with Data Carpentry solo and keep the tricky parts to ask my friends tomorrow.
 
-\setlength{\parskip}{1cm}
-
-{\textbf{\href{https://datacarpentry.org/spreadsheets-socialsci/00-intro/index.html}{Introduction}}}
+\subsection{\textbf{\href{https://datacarpentry.org/spreadsheets-socialsci/00-intro/index.html}{Introduction}}}
 \setlength{\parskip}{0.5em}
 
 
@@ -167,8 +168,7 @@ I’ve used spreadsheets in research quite simply, just to find average values, 
 
 I don’t know if I’ve had that situation in the context of research… a few times a Windows update has interrupted me during an exam, which is scary, but I’ve just taken photos to prove I had a technical error. Definitely the worst one is when a Windows update restarts my computer and I’ve forgotten to save my Word file. It’s fine if you’ve saved it once, because AutoSave saves it for you, but if you haven’t saved and named it yet AutoSave doesn’t run.
 
-\vspace{1em}
-\textbf{\href{https://datacarpentry.org/spreadsheets-socialsci/01-format-data/index.html}{Formatting Data in Spreadsheets}}
+\subsection{\textbf{\href{https://datacarpentry.org/spreadsheets-socialsci/01-format-data/index.html}{Formatting Data in Spreadsheets}}}
 
 \\\color{Gray}\textbf{{Questions}}
 \\ What are some common challenges with formatting data in spreadsheets and how can we avoid them?
@@ -252,7 +252,7 @@ I don’t know if I’ve had that situation in the context of research… a few 
     \item Farmer #3 had a cow that died in April. The data should stipulate whether these values are for total owned during a particular period or a synchronic analysis. If the cow-owning was during the period, the Cows value should read “1”, and look\_after\_cows should read “yes”. If the number are only to reflect the situation at interview, look\_after\_cows should read “no”.
 \end{itemize}
 
-\textbf{Metadata} – The stipulations on your parameters (what counts as a room, is poultry a livestock, etc). This lesson discourages your from putting this information in the file but I can’t think of any reason putting it in a separate tab wouldn’t be a good idea. 
+\textbf{Metadata} – The stipulations on your parameters (what counts as a room, is poultry a livestock, etc). This lesson discourages your from putting this information in the file but I can’t think of any reason putting it in a separate tab wouldn’t be a good idea. \color{teal}\small{- (16.08.19) The reason is for future compatibility. When saving in a universal format, tabs aren't saved. If you save in the Excel format, there may be compatibility issues with other programs, or other versions of Excel.}
 
 \color{gray}
 \begin{itemize}
@@ -272,9 +272,9 @@ I don’t know if I’ve had that situation in the context of research… a few 
     \newline Some definitions need to be made like, what counts as a “room” in the dwelling.
 \end{itemize}
 
-\newpage\maketitle\textbf{\large{14.08.19 – Data Carpentry - Spreadsheets III}}
+\newpage\section{14.08.19 – Data Carpentry}
 
-\textbf{\href{https://datacarpentry.org/spreadsheets-socialsci/02-common-mistakes/index.html}{Formatting Problems}}
+\subsection{\textbf{\href{https://datacarpentry.org/spreadsheets-socialsci/02-common-mistakes/index.html}{Formatting Problems}}}
 
 \underline{Common Spreadsheet Errors}
 \begin{itemize}
@@ -363,57 +363,89 @@ Here is a spreadsheet of the top-earning films of 2018.
     \\For Fantastic Beasts: The Crimes of Grindelwald, the production was ~\$200 million, meaning that the film actually LOST \$40 million, and yet is ranked #20 on the most successful films of 2018. 
 \end{enumerate}
 
-\newpage\maketitle\textbf{\large{16.08.19 - Transferring the Learning Journal to Overleaf}}
+\newpage\section{16.08.19 - Transferring the Learning Journal to Overleaf}
 
-Struggling to work out how to start a new paragraph rather than new line. New line can be done with just two line breaks in the source code without using $\backslash$newline.$\backslash$par just creates new line too.
+\subsection{LaTeX}
+\subsubsection{\underline{Paragraph Spacing Errors:}}\label{error:er6}
+\begin{addmargin}[1cm]{0cm}
+Struggling to work out how to start a new paragraph rather than new line. 
 
-I found an option to $\backslash$parskip\{1em\}
+\underline{Solution:}
 
-What's an em?
+New line can be made with just two backslashes without using $\backslash$newline.
 
+New paragraph can be made with $\backslash$par, but isn't a proper paragraph break.
+
+Two enter-breaks can also be used for a paragraph break.
+
+I found an option to $\backslash$parskip\{1em\}. It's a toggle that can be used in the preamble and set through the document.
+
+\textcolor{teal}{- (19.08.19) I saw someone on Slack suggest using $\backslash$vspace\{1em\} for one-off instances of stretching, which is exactly what I was looking for.}
+
+
+\end{addmargin}
+
+What's an em? \color{teal}{\small{- (19.08.19) An "em" is the space an M takes in the current font. That's quite handy because it's a measurement that changes with the font size.}}
+
+\color{black}
 My word document had a lot of hyperlinks, 
 \href{https://www.overleaf.com/learn/latex/Hyperlinks}{here} is a tutorial on making hyperlinks. Now I can insert all the hyperlinks I had in the original document
 
-I'm having a problem with special characters in Overleaf such as \% and \$ and $\backslash$. I worked out you can use a backslash before most of the special characters to stop them from getting formatted in the main document (thanks, Reddit addiction), but that doesn't work on backslashes. I also can't think of a good way to google that, "how to use backslashes in Overleaf" is only getting me how to use them as a function, of course.
+\subsubsection{\underline{Special Characters Errors:}}\label{error:er7}
+\begin{addmargin}[1cm]{0cm}
+I'm having a problem with special characters in Overleaf such as \% and \$ and $\backslash$. They have functions in Overleaf so I can't use them as text characters without them performing their functions.
 
-\vspace{1cm}
-\maketitle\textbf{\large{19.08.19 - Still transferring the Learning Journal to Overleaf}}
+\underline{Solution:}
 
-Couldn't stay long enough after class to get my questions answered, but found an answer on a forum to insert the $symbol$ of a backslash as \texttt{"\$$\backslash$backslash\$"}.
+I worked out you can use a backslash before most of the special characters to stop them from getting formatted in the main document (thanks, Reddit addiction), but that doesn't work on backslashes. I also can't think of a good way to google that, "how to use backslashes in Overleaf" is only getting me how to use them as a function, of course.
+\\\textcolor{teal}{- (19.08.19) Couldn't stay long enough after class to get my questions answered, but found an answer on a forum to insert the $symbol$ of a backslash as \texttt{"\$$\backslash$backslash\$"}.}
+\end{addmargin}
+
+\section{19.08.19 - Still transferring the Learning Journal to Overleaf}
+\subsection{LaTeX}
 
 \texttt{$\backslash$texttt} makes fonts monospace, I'll keep that going from now on.
 
-An "em" is the space an M takes in the current font. That's quite handy because it's a measurement that changes with the font size.
-
 I'm starting to get the hang of how to run Overleaf now. You really just google everything you want to do and there's always a tutorial for it somewhere. 
 
+\subsubsection{\underline{Image Insertion Errors:}}\label{error:er8}
 \begin{addmargin}[1cm]{0cm}
-\underline{Problem:}
-
 I'm a bit confused about how to get an image in - I used one for explaining the bad data from my discipline. In Word I just clipped it with the clipping tool and ctrl+Ved to Word. The tutorial seems to have 5 different ways that I understand equally poorly.
 
 \underline{Solution:}
 
-Oh I see, I had to add the package to the preamble. Oh and the directory is the directory on Overleaf, not my directory.
+I had to add the package to the preamble. The directory is the directory on Overleaf, not my directory.
+
+You can set the width of the image to equal the text width with 
+\\$\backslash$includegraphics[width=$\backslash$textwidth]\{imagefilename\}
 \end{addmargin}
 
+\vspace{0.5em}
 Wow I didn't realise I had a directory, actually I've put this learning journal in a folder called "Scoping Exercise".
 
-Frankly, I'd like to keep these together so I can easily find codes I used elsewhere. I'll just rename the folder to be all-purpose.
+Frankly, I'd like to keep these together so I can easily find codes I used elsewhere. I'll just rename the folder to be all-purpose. "William-Black-Exercises" to avoid spaces.
 
 I also had a look at indenting entire paragraphs before, I wonder if I just forgot a package in the preamble like for the graphics.
 
 Yes I did.
 
-You can set the width of the image to equal the text width. 
+\subsubsection{\underline{Margins Errors:}}\label{error:er9}
+\begin{addmargin}[1cm]{0cm}
+I want to indent the whole paragraph, not just the first line, because it's quite difficult to read different section that lie in the same space like this.
+
+\underline{Solution:}
+
+I had to add the scrextend package to the preamble. Now I can use $\backslash$begin\{addmargin\}[1cm]\{0cm\} to make left margin 1cm and right margin 0cm, and $\backslash$end\{addmargin\} to indent whole paragraphs.
+
+\end{addmargin}
 
 This is getting a lot easier. I've only spent 2:30hrs on the journal today and I transferred the entire thing including this entry I'm making now.
 
 To be honest, I'm really unaware of any situation where this would be faster or easier than a regular word processor but I'm trusting I'll eventually find one!
 
-\newpage\maketitle\textbf{\large{19.08.19 - Data Carpentry: Spreadsheets IV, V}}
+\newpage\section{19.08.19 - Data Carpentry}
 
-\href{https://datacarpentry.org/spreadsheets-socialsci/03-dates-as-data/index.html}{\textbf{Dates as Data}}
+\subsection{\href{https://datacarpentry.org/spreadsheets-socialsci/03-dates-as-data/index.html}{\textbf{Dates as Data}}}
 
 \color{gray}
 \underline{Questions}
@@ -453,7 +485,7 @@ To be honest, I'm really unaware of any situation where this would be faster or 
 \textbf{Historical data} - dates from before 31 Dec 1899 are not parsed by Excel. 
 
 \newpage
-\href{https://datacarpentry.org/spreadsheets-socialsci/04-quality-assurance/index.html}{\textbf{Quality Assurance}}
+\subsection{\href{https://datacarpentry.org/spreadsheets-socialsci/04-quality-assurance/index.html}{\textbf{Quality Assurance}}}
 
 \color{gray}
 \underline{Question:}
@@ -495,9 +527,9 @@ The floor\_type variable has limited possible answers, so I could list "cement, 
 
 \color{black}
 \vspace{1em}
-\maketitle\textbf{\large{20.08.19 - Data Carpentry: Spreadsheets VI}}
+\section{20.08.19 - Data Carpentry}
 
-\href{https://datacarpentry.org/spreadsheets-socialsci/05-exporting-data/index.html}{\textbf{Exporting Data}}
+\subsection{\href{https://datacarpentry.org/spreadsheets-socialsci/05-exporting-data/index.html}{\textbf{Exporting Data}}}
 
 \color{gray}
 \underline{Question:}
@@ -512,7 +544,148 @@ Export data from a spreadsheet to a CSV file.
 
 \textbf{Storing data} - Do not save as the default formats .xls or .xlsx, due to compatibility issues. R packages can often read them but may have issues with newer versions. Even Excel's own rules can change between versions. Save as TSV (Tab-Separated Values) or CSV, so you can even open it in Notepad, but it still works perfectly in Excel. Can't save multiple tabs. Save as $\rightarrow$ .csv. (If the data has commas, remove them or enclose field with double quotes.)
 
+\newpage\section{20.08.19 - Scoping Exercise II}
+
+\subsection{LaTeX}
+\vspace{1em}
+I'll start the document by copying the code from Scoping Exercise I, so I have all the same formatting, date, author, etc.
+
+\subsubsection{\underline{Automatic Dating Errors:}}\label{error:er10}
+\begin{itemize}
+    \item Just realised the $\backslash$date\{$\backslash$today\} trick is going to be the wrong date once the date changes.
+\end{itemize}
+\begin{itemize}
+\renewcommand{\labelitemi}{$\nobullet$}
+\item \underline{Solution:}
+\renewcommand{\labelitemi}{$\bullet$}
+    \item When dating work on a continuing document, the date should be written out unless the date is something that will change, such as date last edited.
+\end{itemize}
+
+Whoops! I'll keep it at the top of this Learning Journal because then you can see the date of last edit.
+
+\section{23.08.19 - Scoping Exercise II}
+\subsection{Understanding Scoping Exercise II}
+Feedback on Scoping Exercise I: "It seems like your ideas fall into two broad categories, firstly the collection, transcription, translation and analysis of Disney song lyrics and, secondly, writing and referencing your actual thesis. Either of these would be really interesting and useful to pursue."
+
+I agree that the collection, transcription, translation and (comparative) analysis of Disney song lyrics is essentially the mission of the research, but can a computer do that?
+ 
+After staring at these instructions for a couple of hours, here are all the things I don't understand:
+\begin{itemize}
+    \item Is Scoping Exercise II supposed to find one specific problem to solve or is "collection, transcription, translation, and comparative analysis" a problem I can solve if I can define the boundaries well enough?
+    \item The general feedback from the marker: "Part of the scoping process, which was not so well done in the assignment, is the part where students narrow their focus in to one individual idea or group of ideas, ie the pain / gain which you are going to work on this semester as your Proof of Concept / Technology Deployment." 
+    
+    We were not told to do this in the instructions for Scoping Exercise I, and we \textit{are} told to do this for Scoping Exercise II. If this was the aim of Scoping Exercise I, then what is the required elaboration in Scoping Exercise II?
+    \item More feedback: "A number of you jumped straight into finding solutions for your pains / gains, without fully identifying the boundaries of what you are attempting to do. Defining what is both inside and, just as importantly, outside the scope of your project is a key step that will save you both time and frustration."
+    
+    What is a pain reliever or a gain creator if not a solution to a pain or gain? Identifying the boundaries of what I'm attempting to do is absolutely something that can't be skipped, but the exercise was said to be to "brainstorm" what barriers occur in my research and what it would look like to remove them.
+    \item How wishful am I supposed to be with a tool that assists me with research? Since I've no idea what a computer can or can't help with, I don't know how to create a realistic tool, and it seems like there should be some boundaries on how wishful my tool should be.
+    
+    I suggested that my tool could collect, transcribe, translate and analyse the comparison of the translations, which Brian said looked "great". I assume a computer can't do that though, so what's to stop me aiming for a tool that automatically writes the thesis for me?
+    
+    \item I cannot understand the Rubric for this task at all. It seems like the Rubric is designed to cover the entire process up to submission at the end of semester, but there is no indication which parts cover which individual tasks.
+    
+    \item I have found this in the Week 3 Summary: "Scoping Exercise Deadline: Firstly, the initial scoping exercise is due on Sunday 18 August at 11.59pm. This task will be assessed and is the first milestone of your Proof of Concept or Technology Deployment (PoC/TD). The scoping exercise should be submitted via Turnitin. The rubric for the scoping exercise is the first *three* lines of this document [the rubric] and further information on how to approach this assignment and what is required can be found in the 'Proof of Concept Scoping 101' section of the week 2 lecture slides."
+    
+    As far as I was aware, this task was due on Friday, and I had already submitted it. The explanation of what part of the rubric is used to mark us has to be given before we start the task, not after we submit it. Even giving this explanation on Friday and giving an extension until Sunday is not adequate - I had no notice and I was working 6:00-19:00 that weekend!
+    
+    What part of the rubric is for this task?
+    
+    \item This task is not being graded, so does it have a rubric? If not, should I just interpret the instructions in a way that makes sense?
+    
+    \item Found this message on Slack: 
+    \begin{itemize}
+    \renewcommand{\labelitemii}{$\nobullet$}
+        \item \texttt{Brian 4:39 PM}
+        \item Important trap. At the end of the unit, during the final submission for the proof of concept, for the HD "Demonstration of Capability" I wrote: "Proof of Concept achieves goals articulated in the scoping document using tools and techniques tested in elaboration. PoC runs without errors and credibly demonstrates a route for implementation in planned research. PoC matches the product described in the OSP exactly."
+        \\So while this is not being graded, it's important to take it seriously
+    \end{itemize}
+    So the tools and techniques I... "test" in Scoping Exercise II must be used to achieve a goal I specified in Scoping Exercise I? That's just a guess, because:
+    \begin{itemize}
+        \item Nothing has been labeled as "scoping document" or "elaboration". What do these terms mean?
+        \item There is nothing in the instructions for Scoping Exercise II that instructs me to test tools or techniques, only to "decompose" a problem, "recognise patterns" in the data, and to "design an algorithm". If I am supposed to test tools and techniques, that needs to be in the instructions.
+        \item We have no idea what the OSP is yet. All we have from the unit guide is "You will write an 'Original Software Publication' (OSP) article appropriate for a software journal detailing your analytic pipeline using the TeX SoftwareX article template provided."
+% Original Software Publication is a type of journal article.        
+        ... Write an article? Which is it, an article or a software publication? 
+        - What's an analytic pipeline? 
+    \end{itemize}
+    \item The \href{https://unitguides.mq.edu.au/unit_offerings/95891/unit_guide#assessment_task_257486}{unit guide} for this course only specifies four gradeable tasks: three in Weeks 12 and 13, and one that is marked weekly (the learning journal). I'm pretty sure the university does not allow changes to this without having a new unit guide approved, and we are not allowed to be graded on other assessments outside those parameters.
+    \item The instructions for Scoping Exercise II are in three steps:
+    \begin{enumerate}
+        \item \textbf{Decomposition:} First (and most important), decompose the activities that involve ‘pains’, opportunities for ‘gains’, and any solutions you proposed into small parts and/or discrete steps.
+        \begin{itemize}
+            \item The painful \textit{activities} and gainful \textit{opportunities} are broken down into small steps? How do you do that? 
+            \begin{itemize}
+                \item Pain: Translating a Japanese lyric set 
+                \\Step 1: Get the lyrics from online somewhere 
+                \\Step 2: Translate the first line
+                \\Step 3: If unknown kanji appears, look it up on jisho.org
+                \\Step 4: If line does not appear to make sense, check for other meanings on weblio.jp
+                \\Step 5: If line still does not appear to make sense, google the phrase in quotes to see other contexts in which it's used if it's a common phrase, or sometimes if it's an uncommon phrase a native Japanese person will be asking what the phrase means online.
+                \\Step 6: Translate next line
+                \\Repeat Steps 3-6.
+                \vspace{0.5em}
+                \item Gain: It would be great if lyrics were already checked for accuracy
+                \\Step 1: That would be great.
+                \vspace{0.5em}
+                \item Gain: It would be great if a program could automatically fill an Excel sheet formatted to equal bar length so I could assign fidelity values to line pairs easily.
+                \\Step 1: The program would retrieve the lyrics
+                \\Step 2: It would format the lyrics to equal bar length
+                \\Step 3: It would fill an Excel sheet with Spanish, English, and Japanese variable columns for each line of song in rows.
+                \\Step 4: That would be great.
+            \end{itemize}
+            \item Also any \textit{solutions} I proposed in Scoping Exercise I are broken down in to small steps
+            \begin{itemize}
+                \item Firstly, the marker gave us feedback that we were NOT supposed to come up with solutions in Scoping Exercise I
+                \item How do you break down a solution that doesn't exist/doesn't exist yet into smaller steps?
+                \vspace{0.5em}
+                \item Gain creator: A program that could listen to music and autogenerate the lyrics in any language.
+                \\Step 1: Learn how to make program
+                \\Step 2: Use newfound skill to make the program
+                \\Step 3: Run the program
+                \vspace{0.5em}
+                \item Obviously breaking this down doesn't make sense because I don't know what steps are involved apart from "find out what steps are involved". And I don't know if this is possible with current technology, so I also don't want to be penalised later when I can't fulfil my stated goal.
+                \end{itemize}
+        \end{itemize}
+        \item \textbf{Pattern Recognition:} Next (if possible), identify patterns in the problems you are trying to solve or the solutions you are proposing.
+        \begin{itemize}
+            \item If possible? So this part is not a requirement? 
+            \item Earlier in the same instructions, Pattern Recognition was about recognising patterns in data, not in problems or solutions. Is it data, or problems and solutions?
+            \item The real pattern for all of them is that I don't know how to solve the problems, if they can be solved, or what steps one might take to solve them.
+        \end{itemize}
+        \item \textbf{Algorithm Design:} Finally, revise the solutions you developed during Business Analysis to produce a step-by-step guide describing what you want to accomplish.
+        \begin{itemize}
+            \item First of all, the marker gave us feedback on Slack that we were NOT supposed to come up with solutions in Scoping Exercise I.
+            \item What is Business Analysis? - I asked Brian on Slack and he confirmed Business Analysis is another name for Scoping Exercise I.
+            \item How can a step-by-step guide that "describes a goal" be produced? I guess maybe it means a step-by-step guide to \textit{achieving} the goal, but that doesn't make sense either because how can I magically know how to achieve a goal I'm not even sure is possible to achieve? If I knew what the solution to the pain point was, obviously it wouldn't be a pain point because I would just carry out that solution. 
+        \end{itemize}
+    \end{enumerate}
+    \item Although it doesn't say in the instructions (it should REALLY say this in the instructions!!), more information from Slack suggests we are supposed to focus on ONE specific, useful, achievable proof of concept/tech demonstration.
+    \begin{itemize}
+        \item How can a proof or a demonstration be specific, useful, and achievable? I think I STILL don't know what a proof of concept or a tech demonstration is.
+        \item Does this mean the PoC and the TD are the same thing? Because they are two separate assignments in this course
+        \item Brian elaborates, "We're taking all of the possible problems you could solve and finding one that is worthy of solving in the time available." How am I to know what problem is worthy? How am I to know what problem can be solved within 10 weeks? How am I to know what problem can be solved? Am I supposed to guess? If I guess wrong, my marks for the assessment suffer because I didn't use the techniques and tools that I was supposed to "test" in this exercise. - Whatever "test" might mean in this context.
+    \end{itemize}
+    \item Am I the one that's insane here? I know from 4 years of university study that usually when I'm confused, everyone else is just as confused as me but less likely to articulate it and be specific about it than I am. But still. This is a LOT of people who would be just guessing what to do and are satisfied with whatever result comes. Surely someone else is concerned about this??
+\end{itemize}
+
+%\subsection{Computational Analysis: Decomposition, Patterns, Algorithm Design}
+
+
+
+\newpage\section{Library of Errors}
+\begin{enumerate}
+    \item Rich Text Mode \ref{error:er1}
+    \item Bullet List \ref{error:er2}
+    \item Using Packages \ref{error:er3}
+    \item Right Alignment \ref{error:er4}
+    \item Document Style \ref{error:er5}
+    \item Paragraph Spacing \ref{error:er6}
+    \item Special Characters \ref{error:er7}
+    \item Image Insertion \ref{error:er8}
+    \item Margins \ref{error:er9}
+    \item Automatic Dating \ref{error:er10}
+\end{enumerate}
 
 \end{document}
 
-%To-Do List: Find out how to make a table of contents for this journal.
+% commit details: what was added, deleted, changed, AND how it went
