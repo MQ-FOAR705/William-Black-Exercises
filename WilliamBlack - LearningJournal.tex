@@ -668,9 +668,45 @@ After staring at these instructions for a couple of hours, here are all the thin
     \item Am I the one that's insane here? I know from 4 years of university study that usually when I'm confused, everyone else is just as confused as me but less likely to articulate it and be specific about it than I am. But still. This is a LOT of people who would be just guessing what to do and are satisfied with whatever result comes. Surely someone else is concerned about this??
 \end{itemize}
 
-%\subsection{Computational Analysis: Decomposition, Patterns, Algorithm Design}
+\section{26.08.19 - Scoping Exercise II}
+\subsection{Computational Analysis: Decomposition, Patterns, Algorithm Design}
+Now I've had my questions cleared up by Shawn and Brian I can start the task. 
 
+\textbf{Decomposition}
 
+I should break down the pains/gains I listed in Scoping Exercise I into a step-by-step process of what I currently have to do for each pain manually, into as many steps as would be required for a researcher from a different discipline to be able to follow. 
+
+Hard to know exactly how far to decompose this, because for something like data acquisition, for mine I would certainly need to a bunch of things to decide how to SELECT what data to acquire. 
+
+I'll try to cover everything I can think of, it won't matter if it's overkill because Pattern Recognition stage will work out what's useful.
+
+\newpage
+\subsubsection{\underline{Displaying Japanese Characters Errors:}}\label{error:er11}
+\begin{itemize}
+    \item None of the Japanese characters are displaying when I compile the code.
+    \item A lot of the suggestions I'm finding online for typing in Japanese are suggesting packages that don't work, perhaps because they are designed for things called "XeTeX" or "pTeX" or "LuaLaTeX", which I'm guessing might be a different format to LaTeX
+\end{itemize}
+\begin{itemize}
+\renewcommand{\labelitemi}{$\nobullet$}
+\item \underline{Solution:}
+\renewcommand{\labelitemi}{$\bullet$}
+    \item I finally found a \href{https://tex.stackexchange.com/questions/68333/how-to-put-japanese-kanji-characters-into-an-english-document}{forum support question} that specifically asks how to insert Japanese characters into English documents.
+    \item Although the answer at this link is incorrectly formatted, the package CJKutf8 does work, if you begin and end \texttt{\{CJK\}\{UTF8\}} and \texttt{\{Japanese\}} around the begin and end lines of \texttt{\{document\}}.
+\end{itemize}
+
+\textbf{Pattern Recognition}
+
+Although I expected to need to pick one or two favourites out of perhaps 6 possible robots, the decomposition process has resulted in two neat categories: Getting canon lyrics automatically populated to a spreadsheet ready for me to analyse; and helping me write and reference my research the way I want.
+
+I remember Shawn said the first process may not be as difficult as I think, but it's awfully niche-use. If I could really make a framework that would help me stay on my writing, I could use that for every thesis I ever write, which would be amazing. I suppose PoCs for citations are kind of the "fallback" PoC project for this class, but I'm really tempted by this one because it would also \textit{organise} me which is my main barrier of ADHD to overcome. Doing it by hand as I do now is extremely effective but it does take a lot of extra time.
+
+\textbf{Algorithm Design}
+
+I didn't realise until typing this out how great a writing frame would be, I really want that to exist already so I can use it for my 6000 word essay this semester. 
+
+I wonder how difficult it would be to make something visual like that? I'm an ex-graphic designer, I could make it look cute to use and everything. 
+
+I also wonder how possible it would be to make something that interacts with... Word, say. I suppose you ought to avoid making something that is at the mercy of Microsoft's current version of Word, but I'm not about to be capable of making my own word processor either.
 
 \newpage\section{Library of Errors}
 \begin{enumerate}
@@ -684,6 +720,7 @@ After staring at these instructions for a couple of hours, here are all the thin
     \item Image Insertion \ref{error:er8}
     \item Margins \ref{error:er9}
     \item Automatic Dating \ref{error:er10}
+    \item Displaying Japanese Characters \ref{error:er11}
 \end{enumerate}
 
 \end{document}
