@@ -150,10 +150,10 @@ Since yesterday’s task was so surprisingly complicated, I might see how I do w
 \setlength{\parskip}{0.5em}
 
 
-\color{Gray}\textbf{{Questions}}
+\color{Gray}\underline{Questions}
 \newline What are basic principles for using spreadsheets for good data organization?
 
-\textbf{{Objectives}}
+\underline{Objectives}
 \newline Understand how to organize data so computers can make the best use of the data
 
 \begin{itemize}
@@ -708,7 +708,223 @@ I wonder how difficult it would be to make something visual like that? I'm an ex
 
 I also wonder how possible it would be to make something that interacts with... Word, say. I suppose you ought to avoid making something that is at the mercy of Microsoft's current version of Word, but I'm not about to be capable of making my own word processor either.
 
-\newpage\section{Library of Errors}
+\newpage
+\section{27.08.19 - Data Carpentry}
+
+\subsection{\href{http://swcarpentry.github.io/shell-novice/01-intro/index.html}{Introducing the Shell}}
+
+\color{gray}
+\underline{Questions}
+
+What is a command shell and why would I use one?
+
+\underline{Objectives}
+
+Explain how the shell relates to the keyboard, the screen, the operating system, and users’ programs.
+
+Explain when and why command-line interfaces should be used instead of graphical interfaces.
+\color{black}
+
+\vspace{1em}
+\textbf{Background}
+
+Computers can
+\begin{enumerate}
+    \item Run programs
+    \item Store data
+    \item Communicate with each other
+    \item Interact with us
+    \begin{itemize}
+        \item Usually through a GUI (Graphical User Interface). 
+        \\Pros: Intuitive
+        \\Cons: Giving thousands of instructions takes hours
+        \item Or through a CLI (Command-Line Interface)
+        \\Pros: An instruction can be repeated or repeated with modifications thousands of times within minutes
+        \\Cons: Not intuitive
+        \\Interaction happens through the REPL interface (Read-Evaluate-Print-Loop interface). When you type a command and press enter, it \textit{reads} command, \textit{evaluates}/executes command, \textit{prints} output of command, \textit{loops} back to square one to await your next command.
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection{\underline{GUI/CLI Confusion Errors:}}\label{error:er12}
+\begin{itemize}
+    \item Although I just wrote those notes, I still don't really know what a GUI or CLI are. Is it the difference between a command prompt screen and.. an algorithm program?
+\end{itemize}
+\begin{itemize}
+\renewcommand{\labelitemi}{$\nobullet$}
+\item \underline{Solution:}
+\renewcommand{\labelitemi}{$\bullet$}
+    \item \href{https://study.com/academy/lesson/what-is-a-graphical-user-interface-gui-definition-components-examples.html}{This page} explains it a bit more simply: the GUI (pronounced Gooey! Cute!) is like regular Windows Explorer or any of the others, so you interact with the mouse and click on the stuff. Yes, very intuitive in comparison. The CLI is like Unix or whatever interface I used to use to get into Number Munchers when I was a wee kitten.
+\end{itemize}
+
+\textbf{The Shell} runs other programs rather than doing its own thinking. The most popular shell is called Bash. It is \textit{probably} the one I'm using for this exercise. It uses a dollar sign for a prompt so I think we're in.
+
+First command to try is \$ 1s.
+
+\subsubsection{\underline{Shell: Command Not Found Errors:}}\label{error:er13}
+\begin{itemize}
+    \item Typed \texttt{\$1s}, returned: \\\texttt{bash:1s:command not found}
+    \item Using a space between doesn't help, doubling the \$ doesn't help. The guide is suggesting I mistyped the command.
+    
+    \includegraphics[width=\textwidth]{commandnotfound.PNG}
+\end{itemize}
+\begin{itemize}
+\renewcommand{\labelitemi}{$\nobullet$}
+\item \underline{Solution:}
+\renewcommand{\labelitemi}{$\bullet$}
+    \item Copy-pasted it into a document to discover the character is not a one but a lower-case L.
+    \item So the command is LS? Why?
+    \item \href{https://en.wikipedia.org/wiki/Ls}{Wikipedia} says it's short for "list". Welp, they did warn us this wasn't intuitive.
+\end{itemize}
+
+\newpage
+\textbf{Is it difficult?} - ... Yes.
+
+\textbf{Flexibility and automation} - Using shell grammar, you can handle large volumes of data automatically. CLIs are also the easiest way to interact with remote machines, supercomputers, clusters and clouds.
+
+\textbf{Nelle's Pipeline: A Typical Problem}
+
+Nelle Nemo's done a 6 month survey sampling gelatinous marine life. She has 1520 samples and must:
+\begin{enumerate}
+    \item Run each sample through an assay machine that will measure the relative abundance of 300 different proteins. The machine’s output for a single sample is a file with one line for each protein.
+    \item Calculate statistics for each of the proteins separately using a program her supervisor wrote called \texttt{goostats}.
+    \item Write up results. Her supervisor would really like her to do this by the end of the month so that her paper can appear in an upcoming special issue of Aquatic Goo Letters.
+\end{enumerate}
+
+Clicking each file and running \texttt{goostats} one-by-one in the Gooey is going to take weeks of work and give Nemo RSI. Ironically, a CLI is going to be more efficient at handling her Gooey samples. :D
+
+\subsection{\href{http://swcarpentry.github.io/shell-novice/02-filedir/index.html}{Navigating Files and Directories}}
+
+\color{gray}
+\underline{Questions}
+
+How can I move around on my computer?
+
+How can I see what files and directories I have?
+
+How can I specify the location of a file or directory on my computer?
+
+\vspace{1em}
+\underline{Objectives}
+
+Explain the similarities and differences between a file and a directory.
+
+Translate an absolute path into a relative path and vice versa.
+
+Construct absolute and relative paths that identify specific files and directories.
+
+Demonstrate the use of tab completion, and explain its advantages.
+\color{black}
+
+\vspace{1em}
+The "file system" is the file \& directory manager of the OS. Creating/inspecting/renaming/deleting files \& directories can be done with shell commands.
+
+We can see where we are with the command \texttt{pwd} (Print Working Directory). Trying the command myself, and I'm at my home directory.
+
+The root directory can be referred to with just "/". The following names are the directories in nesting order, separated by slashes.
+
+Typing command \texttt{ls} prints the names of files and directories in the CWD (Current Working Directory), and \texttt{-F} (a Flag) can be added after a space to mark files:
+
+/ = directory
+
+@ = link
+
+* = exe
+
+\newpage
+\textbf{General syntax of a shell command}
+
+In the case of \texttt{\$ ls -F /},
+
+\texttt{\$} is the \textbf{prompt}.
+
+\texttt{ls} is the \textbf{command}.
+
+\texttt{-F} is an \textbf{option} (a type of \textbf{parameter}).
+
+\texttt{/} is an \textbf{argument} (a type of \textbf{parameter}).
+
+Commands can be called with multiple parameters, but parameters aren't required. Spaces are required to separate each part, and parts may be case-sensitive.
+
+\vspace{1em}
+\textbf{Getting help}
+
+\texttt{\$ls --help} provides a help option for a cheat sheet of available options.
+
+\texttt{man ls} does not work, but this is apparently fine as long as \texttt{--help} works.
+
+\vspace{1em}
+\textcolor{gray}{What does the command ls do when used with the -l option? What about if you use both the -l and the -h option?}
+
+As it says in \texttt{--help}, it makes longer numbers easier to read for humans.
+
+\vspace{1em}
+\textcolor{gray}{The command \texttt{\$ls -R} lists the contents of directories recursively, i.e., lists their sub-directories, sub-sub-directories, and so on at each level. The command \texttt{\$ls -t} lists things by time of last change, with most recently changed files or directories first. In what order does \texttt{\$ls -R -t} display things?}
+
+Okay, first of all, do NOT try this on the home directory, this is taking forever. 
+
+I'm going to just close the CLI and reopen it.
+
+I can't seem to change my location yet, but when I can I'll perform this exercise on a smaller folder. \textcolor{teal}{\small{- 9:50am: The command lists all files in all directories, with files organised by timestamp within directories. This is easier to see if you add the option \texttt{-l} to make timestamps visible.}}
+
+\texttt{\$ ls -F Desktop} lists the files in a different directory - this time, the Desktop.
+
+\texttt{\$ ls -F Desktop/data-shell} lists the files in Desktop/data-shell.
+
+\texttt{\$ cd Desktop} changes the cwd to Desktop.
+\\(- oh, now I can answer the previous question)
+
+\texttt{\$ cd ..} to return to parent directory.
+
+\texttt{\$ ls -F -a} includes the \texttt{-a} option to show All files and directories in cwd (\texttt{./}) and parent (\texttt{../}) directories.
+
+You can combine options by listing them after a single -, for example, \texttt{\$ ls -F -a} is an identical command to \texttt{\$ ls -Fa}
+
+\texttt{\$ cd} returns you to home directory.
+
+Although the guide suggests \texttt{\$ cd /Users/nelle/Desktop/data-shell} should take us to the data-shell directory, I can see from using \texttt{pwd} that in my case \texttt{\$ cd /c/Users} is required.
+
+\texttt{\textasciitilde} = home directory
+\texttt{\textasciitilde/Desktop} is identical to \texttt{/c/Users/twins/Desktop}
+
+\texttt{-} = previous directory I was in
+\texttt{\$ cd -} takes you back a directory. Very handy.
+
+\newpage
+\textcolor{gray}{Starting from /Users/amanda/data, which of the following commands could Amanda use to navigate to her home directory, which is /Users/amanda?
+\begin{enumerate}
+    \item \texttt{\$ cd .}
+    \item \texttt{\$ cd /}
+    \item \texttt{\$ cd /home/amanda}
+    \item \texttt{\$ cd ../..}
+    \item \texttt{\$ cd \textasciitilde}
+    \item \texttt{\$ cd home}
+    \item \texttt{\$ cd \textasciitilde/data/..}
+    \item \texttt{\$ cd}
+    \item \texttt{\$ cd ..}
+\end{enumerate}}
+
+I would guess only 5 and 9 would work. 
+
+Testing them out, I can see 8 also works, I forgot that shortcut. 7 also works, but is redundant.
+
+\begin{center}
+\vspace{1em}
+\includegraphics[scale=1]{relativepathresolution.PNG}
+\end{center}
+
+Answer should be 4.
+
+\newpage
+\begin{center}
+\vspace{1em}
+\includegraphics[scale=1]{readingcomprehension.PNG}
+\end{center}
+
+I imagine 2 and 3 would work. 3 seems redundant.
+
+
+
+\newpage\section{Library of LaTeX Errors}
 \begin{enumerate}
     \item Rich Text Mode \ref{error:er1}
     \item Bullet List \ref{error:er2}
@@ -723,6 +939,11 @@ I also wonder how possible it would be to make something that interacts with... 
     \item Displaying Japanese Characters \ref{error:er11}
 \end{enumerate}
 
+\section{Library of Data Carpentry Errors}
+\begin{enumerate}
+    \item GUI/CLI Confusion \ref{error:er12}
+    \item Shell: Command Not Found \ref{error:er13}
+\end{enumerate}
 \end{document}
 
 % commit details: what was added, deleted, changed, AND how it went
