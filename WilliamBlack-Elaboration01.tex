@@ -5,140 +5,157 @@
 \usepackage[a4paper, margin=2cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{CJKutf8}
-\usepackage[english]{babel}
 \usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-}
- 
+\hypersetup{colorlinks=true,
+            linkcolor=blue,
+            filecolor=magenta,      
+            urlcolor=cyan,}
 \urlstyle{same}
 
-\newenvironment{Japanese}{%
-  \CJKfamily{min}%
-  \CJKtilde
-  \CJKnospace}{}
-
-
-\title{\textbf{Proof of Concept - Elaboration I: \newline Planning}}
-\date{26 Aug 2019}
+\title{\textbf{Proof of Concept - Elaboration I: Planning}}
+\date{27 Aug 2019}
 \author{William Black 42920477}
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
 
-\begin{CJK}{UTF8}{}
-\begin{Japanese}
 \begin{document}
+\maketitle{\underline{\textbf{\Large{Six Duties of a Focus Frame Robot}}}}
 
- 
-\maketitle \textbf{\small{Decomposition of Pains/Gains Processes from \textit{Scoping Exercise I: Business Analysis}}}
-(Steps marked with asterisks are especially repetitive or formulaic.)
-\begin{enumerate}
-    \item Data collection and transcription of original and translated animated Disney musical song lyrics
-    \begin{itemize}
-        \item Find popular aggregate film review scoring websites for English and Japanese 
-        \begin{itemize}
-            \item I have done this, the most popular appear to be \href{https://rottentomatoes.com/}{Rotten Tomatoes} and \\\href{https://movies.yahoo.co.jp}{Yahoo!映画} respectively
-        \end{itemize}
-        \item Rank most popular animated Disney musicals for each language audience
-        \item Pick highest ranking within top 10 for each language that has largest disparity of popularity ranking from the other language
-        \begin{itemize}
-            \item This is to identify the films that may have suffered/benefited the most from the translation process
-        \end{itemize}
-        \item Combine English and Japanese aggregate scores to identify top two films where translation has had most minimal impact on success
-        \item Search official soundtracks for four most marketed songs from each
-        \item Type song names individually +lyrics (or +letra, or +歌詞) into search engine
-        \item Attempt to retrieve lyrics*
-        \item If lyrics are unclickable (common on lyrics sites to encourage revisits to site), repeat search engine
-        \item Ideally, find all lyrics on same website, to make reformatting lyrics more predictable later
-        \item Copy all lyrics into Word document
-        \item Search each song on Youtube*
-        \item Listen to each song while reading lyrics to check accuracy*
-        \item Divide each song into lines of equal bar length with an enter-break*
-        \item In cases where languages have been divided into different lengths (usually because words/phrases run across lines in one language and not in another), do not allow divisions of whole words, and prioritise division strategies that make the fewest interruptions on phrasing across the language versions
-    \end{itemize}
-    \newpage
-    \item Contrastive linguistic comparison of lyrics against translations
-    \begin{itemize}
-        \item Copy the lyrics line by line to an Excel document divided into 3 variables columns "English" "Spanish" and "Japanese" so that all songlines match across each row*
-        \item Translate each line*
-        \begin{itemize}
-            \item Check my \href{jisho.org}{online English-Japanese} dictionary for unfamiliar language.
-            \item When denotative meaning does not match, check for possible connotative matches through an excellent \href{weblio.jp}{native Japanese dictionary} and through searching for the phrase in a search engine to see phrases in organic contexts.
-        \end{itemize}
-        \item Mark each translation for fidelity:
-        \begin{itemize}
-            \item 0-2 points for fidelity to \underline{denotative} meaning, where 0 indicates no discernible fidelity, 1 indicates partial fidelity, and 2 indicates close fidelity
-            \item 0-2 points for fidelity to \underline{connotative} meaning, where 0 indicates no discernible fidelity, 1 indicates partial fidelity, and 2 indicates close fidelity
-            \item Both scores get their own variable column, and a third variable column for combined score from 0-4
-        \end{itemize}
-    \end{itemize}
-    \item Structural linguistic analysis of differences in lyric meaning
-    \begin{itemize}
-        \item Find patterns in scores (We might expect very low denotative fidelity across all Japanese translations, or unusual instances where fidelity spikes/drops during a song worth investigation)
-        \item Inspect patterns and unusual changes in fidelity to analyse rationale for general translation strategies and sudden changes in translation strategy
-    \end{itemize}
-    \item Writing \& Bibliography process
-    \begin{itemize}
-        \item Open Word
-        \item Save document so Autosave actually works
-        \item Start with section headings along with approximate expected word count of each section
-        \item Write "skeleton" in grey font of items or "bones" I should like to include in literary background section, methodology section, each case study's individual points of interest, etc.
-        \item Fill in a few sentences at a time for each bone, keeping a running word count for each bone every half hour or so*
-        \item Keep separate window to check reference literature against what I've written
-        \begin{itemize}
-            \item References that are confirmed used are pinned to the left.
-            \item References that will be used but are currently being worked into the text unpinned on the left of the dictionary tab
-            \item References likely to be used but not sure where are unpinned between the dictionary tab and the thesaurus tab
-            \item References I may decide to use depending on detail I can reach are unpinned on the right of the thesaurus tab
-        \end{itemize}
-        \item Add bibliography and inline citations as necessary
-        \item Adding/removing/changing bones as necessary, fill skeleton to 80\% word count capacities
-        \item Rewrite thrice
-        \item Copy paste bibliography into clean Word document
-        \item With both documents open, check every inline citation in left window against every full citation in the right window, highlighting all citations that have been covered*
-        \item With any missing/incorrect citations accounted for, Select All and Unhighlight
-        \item Depending on word count progress, rewrite for conciseness or further detail
-    \end{itemize}
-\end{enumerate}
+\section{\large Works in TeX compilers.}
+
+The rationale for this is that I have recently learnt that .tex documents work with all kinds of compilers so the robot won't be at the mercy of any paid software, company, or specific version of document editor.
+
+\section{\large Frames document based on LaTeX sectioning.}
+
+Although the original aim was to create nested sections like a sort of tree with boughs, branches and twigs, \href{https://www.overleaf.com/learn/latex/Sections_and_chapters#Document_Sectioning}{the sectioning system} native to LaTeX is already perfectly suitable for this purpose.
+
+\section{\large Frame elements are formatted to be grey and bold.}
+
+First, it must be seen that formatting and coding can be attached to sectioning. \href{https://www.overleaf.com/learn/latex/Sections_and_chapters#Customize_chapters_and_sections}{This tutorial} would seem to show that the sectioning system can be formatted, and that code can be attached to the system with the \texttt{titlesec} package.
+
+\section{\large Each sub/sub/section allows addition of a word count goal.}
+
+There's a \href{https://www.overleaf.com/learn/how-to/Is_there_a_way_to_run_a_word_count_that_doesn\%27t_include_LaTeX_commands\%3F}{word count tool} already built in to Overleaf that excludes LaTeX commands, so at least this is theoretically possible.
+
+There is also a \href{https://app.uio.no/ifi/texcount/}{Perl script} that counts words. A Perl script is a type of programming language that is considered easier to learn than others and works well with UNIX facilities. (Rouse, 2017)
+
+There is also \href{https://tex.stackexchange.com/questions/44618/dynamically-count-and-return-number-of-words-in-a-section}{this tutorial} that implies that extracting a subcount for a specific section is possible through the \texttt{texcount} package.
+
+
+\section{\large Frames can be toggled on/off} 
+
+Presumably you can just break the code and it stops working, but that doesn't necessarily mean there won't be undesirable consequences like broken code displaying in the document.
+
+One solution might be to add percentage marks to the frames so they become comments and neither function as code nor appear in the document, although this might be annoying to scroll through code and insert them for long documents with dozens of sections. \href{https://vim.fandom.com/wiki/Inserting_text_in_multiple_lines}{Here} is a solution to that where I can apply markers to multiple lines at once, if I choose to use an editor called Vim as my LaTeX editor.
+
+In order to apply \textit{commands} to several parts of a document at once, I may need to create a \href{https://en.wikibooks.org/wiki/LaTeX/Macros}{macro}. It looks like by using \textbackslash newcommand\{\} I will be able to apply any a command to marked points I've prepared in advance throughout the document.
+
+\section{\large Word count is updated with each recompile, turning blue within ten percent of goal, orange within twenty percent of goal, and red when more than thirty percent over.}
+
+It seems like it's at least possible to keep a running count of words in sections that updates with each recompile with a macro, based on an example \href{https://tex.stackexchange.com/a/44626}{seen here}.
+
+LaTeX has an option to use \href{https://en.wikibooks.org/wiki/LaTeX/Macros#Conditionals}{conditionals} with an \texttt{ifthen} package. \href{https://tex.stackexchange.com/questions/13866/why-is-the-ifthen-package-obsolete}{A stackexchange post} talks about this package being obsolete with more modern options being available such as \href{https://ctan.org/pkg/etoolbox}{etoolbox}.
 
 \vspace{1em}
-\maketitle \textbf{Pattern Recognition}
-The most repetitive tasks are retrieving lyrics, finding each song online to check for lyrics accuracy (because some are non-canon or more recent re-recorded versions), actually listening and checking for accuracy whilst dividing songs into equal bar lengths, copying songlines into an Excel sheet, keeping track of subsection word counts while I write, and keeping track of bibliography and inline citations.
+\section*{\underline{\Large{\textbf{Testing:}}}}
+
+\subsection*{Formatting Tests}
+
+After creating a dummy document with lorem ipsum, the first thing to test is applying code to the sectioning system in the first place. The easiest way may be creating a macro. 
 
 \vspace{0.5em}
-This could be grouped into two main robots: 
-\begin{enumerate}
-    \item A robot that magically finds official canon lyrics in the same format and bar length, and populates them to an Excel column.
-    \item A robot that can ask me for my skeleton, then hold it semi-visible with a running word count for each bone while I write. The skeleton would have an area where I can drop Chrome tabs as placeholders for citations, where it would auto-suggest an inline citation and bibliography citation for me to edit later.
-\end{enumerate}
-This is a manageable number of robots to consider algorithm design for. While the first robot might appear more unique and exciting, comparing fidelity in translations is actually not often studied (I have not yet seen such a study), and would be unlikely to be reused. The second robot, while certainly less exciting and possibly something that already exists with some differences, is very tempting to me because my particular method of "skeleton" writing is laborious but highly effective at keeping me focused and well-paced on research goals and avoiding a feeling of not being sure what to write.
+\underline{Test A: (Testing Duties 1, 2, 3, 6)}
+
+Format any LaTeX section label to be grey and bold.
+
+If this fails, a user-created sectioning system will need to be created to have better control over formatting.
+
+$\downarrow$
+
+\underline{Test B: (Testing Duties 1, 2, 3, 4, 6)}
+
+Create macro that applies that formatting to all section headings.
+
+This might look something roughly like 
+\begin{verbatim}
+    \newcommand{\framesect}{\section{\insertformattinghere{#1}}}
+    \begin{document}
+    \framesect{Introduction}
+\end{verbatim}
+
+If this fails due to incompatibility with the native sectioning system, a user-created sectioning system may need to be created.
+
+If this fails due to my own weakness of skill, I will need to turn to further resources and guidance supporting macro creation. It may be necessary to follow a completely new route with a different editor, environment, or coding language.
+
+$\downarrow$
+
+\underline{Test C: (Testing Duties 1, 2, 3, 6)}
+
+Apply macro to all labels; sections, subsections, subsubsections.
+
+If this fails, possibly multiple macros will need to be made to cover the different duties required of sections vs subsubsections, for instance, a different macro may need to be created for those sections where the heading is forbidden from being toggled off, and must appear in the final document.
+
+If multiple macros cannot co-exist peacefully or time constraints do not allow completion, a manual solution can be used, for instance, inserting permanent headings after the writing process is finished.
+
+\vspace{2em}
+\subsection*{Word Count Tests}
+
+Assuming the formatting tests went smoothly, the process should be mostly repeatable or even extended to the requirements of word counting. If a macro was unable to be created, these tests should still apply to whatever process was used as an alternative.
+
+\underline{Test A: (Testing Duties 1, 2, 3, 4}
+
+Add word count goal to formatting macro.
+
+This should only require one extra element to type at each sectioning label, with an option to not specify word count goal.
+
+If this fails, a separate macro may have to be created.
+
+$\downarrow$
+
+\underline{Test B: (Testing Duties 1, 2, 4)}
+
+Extract a subcount of words for one section using a \texttt{texcount} macro.
+
+If this fails, other macros can be tested.
+
+If all macros fail, a different TeX environment like ConTeXt or LuaTeX may need to be considered, or possibly a different coding language. 
+
+$\downarrow$
+
+\underline{Test C: (Testing Duties 1, 2, 4, 6)}
+
+Test subcount strategy on all levels of sectioning. At each recompile, word counter should be able to return updated results for entire dummy document, each section, each subsection, etc.
+
+If this fails, separate word counts may need to be created to deal with each level of sectioning.
+
+\vspace{2em}
+\subsection*{Changing Frame Tests}
+
+Elements of the focus frame are supposed to change automatically and with user input.
+
+\underline{Test A: (Testing Duties 1, 2, 4, 6)}
+
+Extract subcount from section, and where subcount is with ten percent of section word count goal, turn word count from grey to blue using etoolbox.
+
+If no success with etoolbox, other packages like \texttt{ifthen} may be simpler to make, even if not as powerful.
+
+Any solution that passes this test should be replicatable for orange and red counts with their conditions.
 
 \vspace{1em}
-\maketitle \textbf{Algorithm Design}
+\underline{Test B: (Testing Duties 1, 5)}
 
-\vspace{0.5em}
-Robot \#1: 
-\begin{itemize}
-    \item Searches for lyrics for a song across multiple websites, and returns resulting lyrics with number of sites found for each result
-    \item Decides which lyrics are the most correct (- I would probably have to determine which of these was most accurate with human intelligence. A lot of lyrics are just copy-pasted from other sites and incorrect lyrics are often a good audio match because they've been misheard by humans)
-    \item Once a set of three language versions of the song is found, populates them into a spreadsheet, using knowledge of number of syllables in line to assume where bars begin and end
-\end{itemize}
+Create toggle for the macro/process.
 
-Robot \#2:
-\begin{itemize}
-    \item Grey frame surrounding document allows me to add sections, subsections, and subsubsections
-    \item Allows me to add goal word counts to those sub/sub/sections
-    \item Adjusts as I type to keep framing my writing, counting words in each section, until I use a shortcut to turn the frames on/off
-    \item Word count turns blue within ten percent of goal, orange within twenty percent of goal, and red when more than thirty percent over
-    \item Allows me to drop Chrome tab on to bone to create a linked inline citation and bibliography entry
-    \item Generates a bibliography suggestion based on page contents
-    \item When double-clicked, allows me to enter bibliography details in fields, including invisible section for own notes on reference such as copy-pasting actual passage referenced
-    \item Automatically keeps inline citations linked to bibliography entry and changes correctly with entry
-    \item Keeps entries correctly formatted to APA 6th
-\end{itemize}
+This should be the easiest part, it seems that every version of these scripts has an ability to simply say `fframe\=true' somewhere.
+
+If this test fails, a manual solution to turning it off can be found by entering \% marks on coded lines, or simply deleting the code.
+
+
+
+
+\vspace{3em}
+\section*{\underline{\textbf{\Large References:}}}
+
+Rouse, M. (2017). What is Perl? - Definition from WhatIs.com. Retrieved 29 August 2019, from https://whatis.techtarget.com/definition/Perl
 
 \end{document}
-\end{Japanese} 
-\end{CJK}
