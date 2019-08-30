@@ -41,15 +41,15 @@ First learning journal will be in Word since I don’t know how to use LaTeX yet
 
 Brian said to work in Rich Text and watch it come out perfectly on the right.
 
-\subsubsection{\texorpdfstring{\underline{Error: Rich Text Mode}}{}}\label{error:er1}
+\subsubsection{\underline{Error: Rich Text Mode}}\label{error:er1}
 \begin{itemize}
     \item Rich text mode in Overleaf does not come out perfectly on the right at all
     \item Sometimes code appears on the Rich Text version of the left
     \item The rich text options are extremely limited, it seems to just be bold, underline, bullet lists, and nothing else
 \end{itemize}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
-    \item\underline{Solution:}
+\renewcommand{\labelitemi}{$\nobullet$}
+\item \underline{Solution:}
 \renewcommand{\labelitemi}{$\bullet$}
     \item Don’t use Rich Text mode
 \end{itemize}
@@ -62,12 +62,12 @@ Replacing parts of the tutorial result to reflect my Scoping Exercise.
 
 Worked out using $\backslash$date\{$\backslash$today\} instead of typing out the date, magic!
 
-\subsubsection{\texorpdfstring{\underline{Error: Bullet Lists}}{}}\label{error:er2}
+\subsubsection{\underline{Error: Bullet Lists}}\label{error:er2}
 \begin{itemize}
     \item Can’t work out how to make nested bullets.
 \end{itemize}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
 \item \underline{Solution:}
 \renewcommand{\labelitemi}{$\bullet$}
     \item \href{https://www.overleaf.com/learn/latex/Lists}{This tutorial} shows how to make nested bullets. Since I can, as a learning exercise, I want to combine bullets, bullets, and numbered lists.
@@ -79,15 +79,15 @@ I’m numbering the parts of my methodology, including the writing process and t
 
 \href{http://www.rpi.edu/dept/arc/training/latex/LaTeX_symbols.pdf}{This .pdf} is a list of different symbols I can use. 
 
-\subsubsection{\texorpdfstring{\underline{Error: Using Packages}}{}}\label{error:er3}
+\subsubsection{\underline{Error: Using Packages}}\label{error:er3}
 \begin{itemize}
     \item Not working. Some of them work but most of them don’t.
 \end{itemize}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
 \item \underline{Solution:}
 \renewcommand{\labelitemi}{$\bullet$}
-    \item Using \textbackslash usepackage\{\} with the package the symbol is from was surprisingly easy. I assumed I had to install something but just naming the package seems to work. 
+    \item \usepackage{} With the package the symbol is from was surprisingly easy. I assumed I had to install something but just naming the package seems to work. 
     \item I wonder why they don’t just put something like “$\backslash$usepackage\{allpackages\}” at the beginning, and why not make that automatic?
 \end{itemize}
     
@@ -96,12 +96,12 @@ Just realised I have to write gains and gain creators too, and I have the perfec
 I kind of feel like some sort of genius hacker using LaTeX but my brain is starting to hurt, I’ve been fiddling around with the source editor for a few hours now.
 There’s an option to collapse lists at the line numbers when you’re done writing them. It’s much easier to read. I’ve also realised I can separate the lines with single line breaks and nothing changes in the result, which also makes the code much more readable.
 
-\subsubsection{\texorpdfstring{\underline{Error: Right Alignment}}{}}\label{error:er4}
+\subsubsection{\underline{Error: Right Alignment}}\label{error:er4}
 \begin{itemize}
     \item Even with \href{https://www.overleaf.com/learn/latex/Text_alignment#Right-justified_text}{a tutorial} I can’t make a package work to allow me to make the date right-aligned and smaller.
 \end{itemize}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
 \item \underline{Solution:}
 \renewcommand{\labelitemi}{$\bullet$}
     \item 
@@ -114,12 +114,12 @@ But now it looks like I can change the format of the title, so that’s not the 
 Came across \href{https://www.overleaf.com/learn/latex/Paragraph_formatting#Reference_guide}{this tutorial} that tells me how to fix the automatic indenting. Looks nicer without it.
 
 
-\subsubsection{\texorpdfstring{\underline{Error: Document Style}}{}}\label{error:er5}
+\subsubsection{\underline{Error: Document Style}}\label{error:er5}
 \begin{itemize}
     \item The margins look kind of insane, they’re like two inches wide, and for some reason they’re even wider on only the second page. The first and third page look normal though.
 \end{itemize}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
 \item \underline{Solution:}
 \renewcommand{\labelitemi}{$\bullet$}
     \item After a lot of messing around with this tutorial to use the geometry package to make the margins more normal, I realised two-sided letter paper was still the document style set from when I was going through the set-up tutorial. I’ve made the paper A4 and one-sided.
@@ -150,14 +150,14 @@ Since yesterday’s task was so surprisingly complicated, I might see how I do w
 \setlength{\parskip}{0.5em}
 
 
-\color{Gray}\textbf{Questions}
-\\What are basic principles for using spreadsheets for good data organization?
+\color{Gray}\underline{Questions}
+\newline What are basic principles for using spreadsheets for good data organization?
 
-\textbf{Objectives}
-\\Understand how to organize data so computers can make the best use of the data
+\underline{Objectives}
+\newline Understand how to organize data so computers can make the best use of the data
 
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
 \item \textbf{\underline{Exercise}}
 \renewcommand{\labelitemi}{$\bullet$}
     \item How many people have used spreadsheets in their research?
@@ -170,8 +170,8 @@ I don’t know if I’ve had that situation in the context of research… a few 
 
 \subsection{\textbf{\href{https://datacarpentry.org/spreadsheets-socialsci/01-format-data/index.html}{Formatting Data in Spreadsheets}}}
 
-\color{Gray}\textbf{{Questions}}
-\\What are some common challenges with formatting data in spreadsheets and how can we avoid them?
+\\\color{Gray}\textbf{{Questions}}
+\\ What are some common challenges with formatting data in spreadsheets and how can we avoid them?
 
 \textbf{{Objectives}}
 \\Recognise and resolve common spreadsheet formatting problems.
@@ -189,7 +189,7 @@ I don’t know if I’ve had that situation in the context of research… a few 
 \newpage
 \color{gray}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
 \item \textbf{\underline{Exercise}}
 \item We’re going to take a messy version of the SAFI data and describe how we would clean it up.
 \end{itemize}
@@ -210,53 +210,53 @@ I don’t know if I’ve had that situation in the context of research… a few 
 
 \textbf{{Mozambique Data:}}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
     \item \underline{Dwellings}
 \renewcommand{\labelitemi}{$\bullet$}
     \item Some typos – mabati\_sloping instead of mabatisloping, errth instead of earth
     \item Most of the columns do not have spaces, presumably for algorithm reasons. “wall type”, “floor type”, “water use” should have their spaces replaced with underscores if that’s necessary.
-    \item Farmer \#3 has -99 rooms in his dwelling, which is arguably too few.
-    \item Farmer \#10 has five rooms in his dwelling including a barn. If the barn doesn’t count as a room, there should be a separate column for barns.
-\renewcommand{\labelitemi}{}
+    \item Farmer #3 has -99 rooms in his dwelling, which is arguably too few.
+    \item Farmer #10 has five rooms in his dwelling including a barn. If the barn doesn’t count as a room, there should be a separate column for barns.
+\renewcommand{\labelitemi}{$\nobullet$}
     \item \underline{Livestock}
 \renewcommand{\labelitemi}{$\bullet$}
-    \item Farmer \#10 has no entry. If he has no livestock, it should say he has 0 so he is still included in the sample. Also check whether the missing entry really belongs to Farmer \#10, or if it is another farmer whose absence has moved the other farmers up a position in key\_id
+    \item Farmer #10 has no entry. If he has no livestock, it should say he has 0 so he is still included in the sample. Also check whether the missing entry really belongs to Farmer #10, or if it is another farmer whose absence has moved the other farmers up a position in key\_id
     \item The number of livestock owned appears to be automatically generated from how many comma-separated animals are listed. This means that the number represents the number of TYPES of livestock owned, not the number of livestock. If number of livestock is needed, the farmers need to be re-interviewed and columns for each type of livestock should be made to record numbers of each type.
     \item Where “none” was entered, “1” type of livestock was recorded because the program assumed a none was a type of livestock. “none” entries should be replaced with “0”.
-    \item Farmer \#10 has five rooms in his dwelling including a barn. If the barn doesn’t count as a room, there should be a separate column for barns. 
-    \item For Farmers \#1 and \#5, “poultry” was counted as a type of livestock, where it was not for the other farmers.
-    \item It is quite unlikely that Farmers \#2, \#4, \#5, and \#9 own cows but don’t look after them. Perhaps someone else has removed that responsibility from them but the researcher should check if that’s true.\renewcommand{\labelitemi}{}
+    \item Farmer #10 has five rooms in his dwelling including a barn. If the barn doesn’t count as a room, there should be a separate column for barns. 
+    \item For Farmers #1 and #5, “poultry” was counted as a type of livestock, where it was not for the other farmers.
+    \item It is quite unlikely that Farmers #2, #4, #5, and #9 own cows but don’t look after them. Perhaps someone else has removed that responsibility from them but the researcher should check if that’s true.\renewcommand{\labelitemi}{$\nobullet$}
     \item \underline{Plots}
 \renewcommand{\labelitemi}{$\bullet$}
     \item “yes” and “no” are not consistent. Ideally, these values should be replaced with binary “1” = yes and “0” = no, or "yes" and "no".
-    \item Farmers \#5 and \#10 have not had plots recorded. If they have no plots, “0” should be recorded.
+    \item Farmers #5 and #10 have not had plots recorded. If they have no plots, “0” should be recorded.
     \item Where “none” was entered, “1” type of livestock was recorded because the program assumed a none was a type of livestock. “none” entries should be replaced with “0”.
-    \item Farmer \#9 has -999 plots on his farm, which is arguably too few.
-    \item Farmer \#2 only uses water during summer. If this affects the data, columns should be made for the seasons of Mozambique and Tanzania to record water usage in each season. If it does not affect data, then the most accurate answer is “yes”.
+    \item Farmer #9 has -999 plots on his farm, which is arguably too few.
+    \item Farmer #2 only uses water during summer. If this affects the data, columns should be made for the seasons of Mozambique and Tanzania to record water usage in each season. If it does not affect data, then the most accurate answer is “yes”.
 \end{itemize}
 
 \textbf{{Tanzania Data:}}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
     \item \underline{Dwellings}
 \renewcommand{\labelitemi}{$\bullet$}
     \item If wall type, floor type, and look after cows categories should not have spaces in their cells, replace spaces with underscores.
-    \item Farmer \#8 has 4 rooms including a cowshed. If a cowshed is not a room, there should be another column for cowsheds. underscores if that’s necessary.
-\renewcommand{\labelitemi}{}
+    \item Farmer #8 has 4 rooms including a cowshed. If a cowshed is not a room, there should be another column for cowsheds. underscores if that’s necessary.
+\renewcommand{\labelitemi}{$\nobullet$}
     \item \underline{Livestock}
 \renewcommand{\labelitemi}{$\bullet$}
-    \item Farmer \#10’s entry is missing. If he has no livestock then “0”s should be recorded. Also check whether the missing entry really belongs to Farmer \#10, or if it is another farmer whose absence has moved the other farmers up a position in key\_id.
+    \item Farmer #10’s entry is missing. If he has no livestock then “0”s should be recorded. Also check whether the missing entry really belongs to Farmer #10, or if it is another farmer whose absence has moved the other farmers up a position in key\_id.
     \item Many values are not recorded. If there are no livestock of that category, 0 should be recorded.
     \item Many of the totals do not equal the number of livestock recorded. Farmers need to be re-interviewed for correct numbers.
-    \item Farmers \#4 and \#9 have cows and do not look after cows, which seems unusual. Researcher should check if that’s true.
-    \item Farmer \#3 had a cow that died in April. The data should stipulate whether these values are for total owned during a particular period or a synchronic analysis. If the cow-owning was during the period, the Cows value should read “1”, and look\_after\_cows should read “yes”. If the number are only to reflect the situation at interview, look\_after\_cows should read “no”.
+    \item Farmers #4 and #9 have cows and do not look after cows, which seems unusual. Researcher should check if that’s true.
+    \item Farmer #3 had a cow that died in April. The data should stipulate whether these values are for total owned during a particular period or a synchronic analysis. If the cow-owning was during the period, the Cows value should read “1”, and look\_after\_cows should read “yes”. If the number are only to reflect the situation at interview, look\_after\_cows should read “no”.
 \end{itemize}
 
 \textbf{Metadata} – The stipulations on your parameters (what counts as a room, is poultry a livestock, etc). This lesson discourages your from putting this information in the file but I can’t think of any reason putting it in a separate tab wouldn’t be a good idea. \color{teal}\small{- (16.08.19) The reason is for future compatibility. When saving in a universal format, tabs aren't saved. If you save in the Excel format, there may be compatibility issues with other programs, or other versions of Excel.}
 
 \color{gray}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
 \item \textbf{\underline{Exercise}}
     \item Download a clean version of this dataset and open the file with your spreadsheet program. This data has many more variables that were not included in the messy spreadsheet and is formatted according to tidy data principles.
     \item Discuss this data with a partner and make a list of some of the types of metadata that should be recorded about this dataset. It may be helpful to start by asking yourself, “What is not immediately obvious to me about this data? What questions would I need to know the answers to in order to analyze and interpret this data?”
@@ -264,7 +264,7 @@ I don’t know if I’ve had that situation in the context of research… a few 
 
 \color{black}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
     \item The variables need to be defined for a human to read this. Years\_liv might be years at the address, years that the farm has been functioning, years in the village, etc. Months\_lack\_food might be over the past calendar year, the last 12 months, it might be a lack of human food, livestock food, or lack of food produced by the farm
     \vspace{0.5em}
     \newline Affect\_conflicts appears to be a multiple-choice answer, so we need all the options that were available to interviewees.
@@ -325,7 +325,7 @@ I don’t know if I’ve had that situation in the context of research… a few 
 \underline{Problematic Data Produced by my Discipline}
 
 \vspace{1em}
-I’m an interdisciplinary student and have three disciplines to choose from, but I’ll go with Media \& Communication since this semester is quite focused on that framework in my process.
+I’m an interdisciplinary student and have three disciplines to choose from, but I’ll go with Media & Communication since this semester is quite focused on that framework in my process.
 
 This isn’t exactly a “bad spreadsheet”, but this is an example of poor design with missing variables that’s bothered me for a few years now – why on earth would movies be ranked or have their success judged based on gross earnings? 
 
@@ -356,17 +356,17 @@ Here is a spreadsheet of the top-earning films of 2018.
     \vspace{0.5em}
     \\If we’re happy to commit to financial earnings being our metric for success, amount grossed is not a logical approach. Financial success should tell you what production companies/directors/actors are the safest financial investments for investing distribution companies, portfolios managers, etc., but this does nothing to show what kind of return these titles made on their investments, only how much money was received. 
     \vspace{0.5em}
-    \\For a film like Jurassic Park, ranked \#4 due to grossing ~\$418 million, the production budget was ~\$170 million, meaning that the amount earnt by the movie was approximately 245\% of its investment. 
+    \\For a film like Jurassic Park, ranked #4 due to grossing ~\$418 million, the production budget was ~\$170 million, meaning that the amount earnt by the movie was approximately 245\% of its investment. 
     \vspace{0.5em}
-    \\A Quiet Place, for comparison, ranked at \#16 for grossing \$188 million, but had a meagre production budget of \$17 million, meaning that the film earnt 1,106\% of its investment.
+    \\A Quiet Place, for comparison, ranked at #16 for grossing \$188 million, but had a meagre production budget of \$17 million, meaning that the film earnt 1,106\% of its investment.
     \vspace{0.5em}
-    \\For Fantastic Beasts: The Crimes of Grindelwald, the production was ~\$200 million, meaning that the film actually LOST \$40 million, and yet is ranked \#20 on the most successful films of 2018. 
+    \\For Fantastic Beasts: The Crimes of Grindelwald, the production was ~\$200 million, meaning that the film actually LOST \$40 million, and yet is ranked #20 on the most successful films of 2018. 
 \end{enumerate}
 
 \newpage\section{16.08.19 - Transferring the Learning Journal to Overleaf}
 
 \subsection{LaTeX}
-\subsubsection{\texorpdfstring{\underline{Error: Paragraph Spacing}}{}}\label{error:er6}
+\subsubsection{\underline{Error: Paragraph Spacing}}\label{error:er6}
 \begin{addmargin}[1cm]{0cm}
 Struggling to work out how to start a new paragraph rather than new line. 
 
@@ -391,7 +391,7 @@ What's an em? \color{teal}{\small{- (19.08.19) An "em" is the space an M takes i
 My word document had a lot of hyperlinks, 
 \href{https://www.overleaf.com/learn/latex/Hyperlinks}{here} is a tutorial on making hyperlinks. Now I can insert all the hyperlinks I had in the original document
 
-\subsubsection{\texorpdfstring{\underline{Error: Special Characters}}{}}\label{error:er7}
+\subsubsection{\underline{Error: Special Characters}}\label{error:er7}
 \begin{addmargin}[1cm]{0cm}
 I'm having a problem with special characters in Overleaf such as \% and \$ and $\backslash$. They have functions in Overleaf so I can't use them as text characters without them performing their functions.
 
@@ -408,7 +408,7 @@ I worked out you can use a backslash before most of the special characters to st
 
 I'm starting to get the hang of how to run Overleaf now. You really just google everything you want to do and there's always a tutorial for it somewhere. 
 
-\subsubsection{\texorpdfstring{\underline{Error: Image Insertion}}{}}\label{error:er8}
+\subsubsection{\underline{Error: Image Insertion}}\label{error:er8}
 \begin{addmargin}[1cm]{0cm}
 I'm a bit confused about how to get an image in - I used one for explaining the bad data from my discipline. In Word I just clipped it with the clipping tool and ctrl+Ved to Word. The tutorial seems to have 5 different ways that I understand equally poorly.
 
@@ -429,7 +429,7 @@ I also had a look at indenting entire paragraphs before, I wonder if I just forg
 
 Yes I did.
 
-\subsubsection{\texorpdfstring{\underline{Error: Margins}}{}}\label{error:er9}
+\subsubsection{\underline{Error: Margins}}\label{error:er9}
 \begin{addmargin}[1cm]{0cm}
 I want to indent the whole paragraph, not just the first line, because it's quite difficult to read different section that lie in the same space like this.
 
@@ -450,15 +450,14 @@ To be honest, I'm really unaware of any situation where this would be faster or 
 \color{gray}
 \underline{Questions}
 
-What are good approaches for handling dates in spreadsheets?
+- What are good approaches for handling dates in spreadsheets?
 
 \underline{Objectives}
 
-Recognise problematic or suspicious date formats.
-\\Use formulas to separate dates into their component values (e.g. Month, Day, Year)
+- Recognise problematic or suspicious date formats.
+\newline - Use formulas to separate dates into their component values (e.g. Month, Day, Year)
 \color{black}
 
-\vspace{1em}
 \textbf{Date formats in spreadsheets} - It is $not$ best practice to store dates in one column, ideally you have a day, month, and year column.
 
 \textbf{Dates stored as integers} - Excel stores dates as days from 31 Dec 1899, which can be useful if you need to average durations or study the dates as integers.
@@ -466,7 +465,6 @@ Recognise problematic or suspicious date formats.
 \textbf{Regional date formatting} - While there is an option to make date format suit your region, you'll forget to set it or US researchers will forget to adjust it or will try to adjust it when you already did.
 
 \color{gray}
-\vspace{1em}
 \underline{Exercise:}
 \begin{enumerate}
     \item Download and open the dates.xlsx file. This file contains a subset of the data from the SAFI interviews, including the dates on which the interviews were conducted.
@@ -499,12 +497,10 @@ How can we carry out basic quality assurance in spreadsheets?
 Apply quality assurance techniques to limit incorrect data entry.
 \color{black}
 
-\vspace{1em}
 \textbf{Validating data on input} - Data is restricted to numeric range or controlled vocabulary.
 
-\textbf{Restricting data to a numeric range} - Select the whole column. Data $\rightarrow$ Data Tools $\rightarrow$ Data Validation. You can set it to only allow sensible numbers.
+\textbf{Restricting data to a numeric range} - Select the whole column. Data $\rightarrow$ Data Tools $\rightarrow$ Data Validation. You can set it to only allow sensible numbers
 
-\vspace{1em}
 \color{gray}\begin{addmargin}[1cm]{0cm}
 \underline{Exercise:}
 
@@ -517,11 +513,9 @@ I'll assume the years\_farm variable is how many years the interviewee has perso
 I made my input message title "Whole years interviewee has run farm (1-100)" which displays when hovering over the cell.
 \end{addmargin}
 
-\vspace{1em}
 \color{black}
 \textbf{Restricting data to entries from a list} - Select variable column $\rightarrow$ Data $\rightarrow$ Data Tools $\rightarrow$ Data Validation again. Allow: List will give you a Source box, where you can list the possible answers separated by commas.
 
-\vspace{1em}
 \color{gray}\begin{addmargin}[1cm]{0cm}
 \underline{Exercise:}
 
@@ -550,18 +544,18 @@ Export data from a spreadsheet to a CSV file.
 
 \textbf{Storing data} - Do not save as the default formats .xls or .xlsx, due to compatibility issues. R packages can often read them but may have issues with newer versions. Even Excel's own rules can change between versions. Save as TSV (Tab-Separated Values) or CSV, so you can even open it in Notepad, but it still works perfectly in Excel. Can't save multiple tabs. Save as $\rightarrow$ .csv. (If the data has commas, remove them or enclose field with double quotes.)
 
-\section{20.08.19 - Proof of Concept: Scoping Exercise II}
+\newpage\section{20.08.19 - Proof of Concept: Scoping Exercise II}
 
 \subsection{LaTeX}
 \vspace{1em}
 I'll start the document by copying the code from Scoping Exercise I, so I have all the same formatting, date, author, etc.
 
-\subsubsection{\texorpdfstring{\underline{Error: Automatic Dating}}{}}\label{error:er10}
+\subsubsection{\underline{Error: Automatic Dating}}\label{error:er10}
 \begin{itemize}
     \item Just realised the $\backslash$date\{$\backslash$today\} trick is going to be the wrong date once the date changes.
 \end{itemize}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
 \item \underline{Solution:}
 \renewcommand{\labelitemi}{$\bullet$}
     \item When dating work on a continuing document, the date should be written out unless the date is something that will change, such as date last edited.
@@ -600,7 +594,7 @@ After staring at these instructions for a couple of hours, here are all the thin
     
     \item Found this message on Slack: 
     \begin{itemize}
-    \renewcommand{\labelitemii}{}
+    \renewcommand{\labelitemii}{$\nobullet$}
         \item \texttt{Brian 4:39 PM}
         \item Important trap. At the end of the unit, during the final submission for the proof of concept, for the HD "Demonstration of Capability" I wrote: "Proof of Concept achieves goals articulated in the scoping document using tools and techniques tested in elaboration. PoC runs without errors and credibly demonstrates a route for implementation in planned research. PoC matches the product described in the OSP exactly."
         \\So while this is not being graded, it's important to take it seriously
@@ -686,13 +680,14 @@ Hard to know exactly how far to decompose this, because for something like data 
 
 I'll try to cover everything I can think of, it won't matter if it's overkill because Pattern Recognition stage will work out what's useful.
 
-\subsubsection{\texorpdfstring{\underline{Error: Displaying Japanese Characters}}{}}\label{error:er11}
+\newpage
+\subsubsection{\underline{Error: Displaying Japanese Characters}}\label{error:er11}
 \begin{itemize}
     \item None of the Japanese characters are displaying when I compile the code.
     \item A lot of the suggestions I'm finding online for typing in Japanese are suggesting packages that don't work, perhaps because they are designed for things called "XeTeX" or "pTeX" or "LuaLaTeX", which I'm guessing might be a different format to LaTeX
 \end{itemize}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
 \item \underline{Solution:}
 \renewcommand{\labelitemi}{$\bullet$}
     \item I finally found a \href{https://tex.stackexchange.com/questions/68333/how-to-put-japanese-kanji-characters-into-an-english-document}{forum support question} that specifically asks how to insert Japanese characters into English documents.
@@ -750,12 +745,12 @@ Computers can
     \end{itemize}
 \end{enumerate}
 
-\subsubsection{\texorpdfstring{\underline{Error: GUI/CLI Confusion}}{}}\label{error:er12}
+\subsubsection{\underline{Error: GUI/CLI Confusion}}\label{error:er12}
 \begin{itemize}
     \item Although I just wrote those notes, I still don't really know what a GUI or CLI are. Is it the difference between a command prompt screen and.. an algorithm program?
 \end{itemize}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
 \item \underline{Solution:}
 \renewcommand{\labelitemi}{$\bullet$}
     \item \href{https://study.com/academy/lesson/what-is-a-graphical-user-interface-gui-definition-components-examples.html}{This page} explains it a bit more simply: the GUI (pronounced Gooey! Cute!) is like regular Windows Explorer or any of the others, so you interact with the mouse and click on the stuff. Yes, very intuitive in comparison. The CLI is like Unix or whatever interface I used to use to get into Number Munchers when I was a wee kitten.
@@ -765,7 +760,7 @@ Computers can
 
 First command to try is \$ 1s.
 
-\subsubsection{\texorpdfstring{\underline{Error: Shell Command Not Found}}{}}\label{error:er13}
+\subsubsection{\underline{Error: Shell Command Not Found}}\label{error:er13}
 \begin{itemize}
     \item Typed \texttt{\$1s}, returned: \\\texttt{bash:1s:command not found}
     \item Using a space between doesn't help, doubling the \$ doesn't help. The guide is suggesting I mistyped the command.
@@ -773,7 +768,7 @@ First command to try is \$ 1s.
     \includegraphics[width=\textwidth]{commandnotfound.PNG}
 \end{itemize}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
 \item \underline{Solution:}
 \renewcommand{\labelitemi}{$\bullet$}
     \item Copy-pasted it into a document to discover the character is not a one but a lower-case L.
@@ -948,187 +943,9 @@ The more I look into macros the more it seems like everything I would do for thi
 
 Coming up with ways to "test" this process is arduous but a good exercise, because it's really made me think about how to chunk the problem and aim for the fastest way to fail possible. 
 
-\section{30.08.19 - Data Carpentry}
-\subsection{\href{http://swcarpentry.github.io/shell-novice/03-create/index.html}{Working With Files and Directories}}
-
-\color{gray}
-\underline{Questions}
-
-How can I create, copy, and delete files and directories?
-
-How can I edit files?
-
-\underline{Objectives}
-
-Create a directory hierarchy that matches a given diagram.
-
-Create files in that hierarchy using an editor or by copying and renaming existing files.
-
-Delete, copy and move specified files and/or directories.
-\color{black}
-
-\vspace{1em}
-\textbf{Creating directories}
-
-\texttt{\$ mkdir foldername} makes a folder called foldername in the cwd. - This is a good reason to not use spaces and special characters in file/directory names. If you're stuck with a name that does have a space, you have to surround it with quotes. E.g. \texttt{\$ cd "Billy's folder"}
-
-\vspace{1em}
-\textbf{Creating text files}
-
-\texttt{\$ nano draft.txt} creates a text document in Nano, a basic text editor. There are other text editors like Vim or Notepad++, when you're ready to trade learning time for better utility.
-
-Use the nano screen to write/edit the document, and use \textsuperscript{$\wedge$}O to "write out" (this means save, apparently). The shortcuts are at the bottom, and the carat \textsuperscript{$\wedge$} mark means Ctrl+. E.g. \textsuperscript{$\wedge$}X Exit means press Ctrl+X to exit.
-
-\vspace{1em}
-\color{gray}
-\underline{Exercise:}
-
-We have seen how to create text files using the nano editor. Now, try the following command: \texttt{\$ touch my\_file.txt}
-
-\begin{enumerate}
-    \item What did the touch command do? When you look at your current directory using the GUI file explorer, does the file show up?
-    \item Use ls -l to inspect the files. How large is my\_file.txt?
-    \item When might you want to create a file this way?
-\end{enumerate}
-
-\vspace{2em}
-\color{black}
-\begin{enumerate}
-    \item It seems to have made an empty file, it does show up on my Gooey.
-    \item Looks like it's 0b
-    \item Perhaps you need an empty file for another program to refer to, like how in spreadsheets you might need a zero in some cells rather than leaving the data empty? - Reading the solution, it seems that answer is more or less right. Some programs need the file to at least exist before they can populate it with information. 
-\end{enumerate}
-
-\vspace{1em}
-\textbf{Moving files and directories}
-
-\texttt{\$ mv draft.txt coffee.txt} uses move command to change the name of the file from "draft.txt" to "coffee.txt".
-
-\texttt{\$ mv coffee.txt ..} would move the file to the cwd's parent directory.
-
-Similarly, \texttt{\$ mv billys\_folder/coffee.txt .} would move coffee.txt from within billys\_folder to the cwd.
-
-\vspace{1em}
-\color{gray}
-\underline{Exercise:}
-
-After running the following commands, Jamie realizes that she put the files \texttt{sucrose.dat} and \texttt{maltose.dat} into the wrong folder:
-
-\$ ls -F
- analyzed/ raw/
-
-\$ ls -F analyzed
-fructose.dat glucose.dat maltose.dat sucrose.dat
-
-\$ cd raw/
-
-Fill in the blanks to move these files to the current folder (i.e., the one she is currently in):
-
-\$ mv \_\_\_/sucrose.dat  \_\_\_/maltose.dat \_\_\_
-
-\vspace{1em}
-\color{black}
-After confirming on my own computer that you can move more than one file at once, the command should be: \texttt{\$ mv analyzed/sucrose.dat analyzed/maltose.dat .}, because "." represents the cwd.
-
-\vspace{1em}
-\textbf{Copying files and directories}
-
-\texttt{\$ cp billysfile.txt billysfilebackup.txt} copies the file rather than moves it. Naturally, you can determine the folder it copies to too, and copy entire directories to existing or new directories.
-
-\textbf{Removing files and directories}
-
-\texttt{\$ rm quotes.txt} to delete the file. Add option \texttt{-i} to use a prompt to check you're only deleting files you want to delete. Hardly useful for deleting one file but if you used \texttt{\$ rm -ri billysfolder} you would be prompted to agree to descend to billysfolder, then prompted for deleting each file within, one at a time, and then the folder itself.
-
-\textbf{Wildcards}
-
-\texttt{*} is a wildcard for zero or more characters.
-
-\texttt{?} is a wildcard for a single character. 
-
-\color{gray}
-When run in the molecules directory, which ls command(s) will produce \texttt{ethane.pdb methane.pdb}?
-\\1. ls *t*ane.pdb
-\\2. ls *t?ne.*
-\\3. ls *t??ne.pdb
-\\4. ls ethane.*
-\color{black}
-
-1 and 3. - Solution says not 1, because you would also catch octane.pdb and pentane.pdb. Fair point.
-
-\color{gray}
-Sam has a directory containing calibration data, datasets, and descriptions of the datasets. Before heading off to another field trip, she wants to back up her data and send some datasets to her colleague Bob. Sam uses the following commands to get the job done.
-\\Help Sam by filling in the blanks.
-\begin{verbatim}
-$ cp *dataset* backup/datasets
-$ cp ____calibration____ backup/calibration
-$ cp 2015-____-____ send_to_bob/all_november_files/
-$ cp ____ send_to_bob/all_datasets_created_on_a_23rd/
-\end{verbatim}
-
-\color{black}
-\begin{verbatim}
-$ cp *dataset* backup/datasets
-$ cp *calibration.txt backup/calibration
-$ cp 2015-11-* send_to_bob/all_november_files/
-$ cp *-23-dataset* send_to_bob/all_datasets_created_on_a_23rd/  
-\end{verbatim}
-Solution agrees!
-
-The other exercises were a bit too easy to be bothered journalling.
-
-So far, although I can understand the purpose of using a CLI over the Gooey, it's hard to come up with any scenario where it could regularly be useful. Even copying/moving files can be done in a similar way in the Gooey by using the search function, selecting all of them, and copying/moving them where you wish.
-
-\section{30.08.19 - LaTeX Error Clean Up}
-\subsection{LaTeX}
-
-Compiling this document returns 108 Errors, despite compiling and reading normally. I might be just good enough to fix a lot of these by now.
-
-A lot of these errors are turning out to just be things like typing \# but forgetting to put a backslash behind it to escape the special character. Only 64 to go.
-
-\subsubsection{\texorpdfstring{\underline{Error: Undefined Control Sequence}}{}}\label{error:er14}
-\begin{itemize}
-    \item\begin{verbatim}
-<recently read> \nobullet
-        
-l.52\item\underline
-        {Solution:}
-            
-The control sequence at the end of the top line of 
-your error message was never \def'ed. If you have 
-misspelled it, type `l' and the correct spelling. 
-Otherwise just continue, and I'll forget whatever 
-was undefined.
-    \end{verbatim}
-    \item So \$\textbackslash nobullet\$ is the problem? I think I might have just guessed to put that, since the normal type was \$\textbackslash bullet\$. 
-\end{itemize}
-\begin{itemize}
-\renewcommand{\labelitemi}{}
-    \item \underline{Solution:}
-\end{itemize}
-\renewcommand{\labelitemi}{$\bullet$}
-\begin{itemize}
-    \item Since the error message says it'll forget whatever was undefined, and \$\textbackslash nobullet\$ was undefined, so I figured leaving the curly brackets empty would be the same without the error.
-    \item When that worked, I just replaced all instances of \{\$\textbackslash nobullet\$\} with \{\}. I was a bit worried about doing all of them at the same time like that so I copied the code into a new document before trying it. 
-\end{itemize}
-
-\subsubsection{\texorpdfstring{\underline{Error: Hyperref Token Not Allowed}}{}}\label{error:er15}
-\begin{itemize}
-    \item Even though the library of errors functions, it returns errors in coding the subsubsections they belong to. 
-\end{itemize}
-\begin{itemize}
-\renewcommand{\labelitemi}{}
-\item \underline{Solution:}
-\renewcommand{\labelitemi}{$\bullet$}
-    \item Apparently the issue is that the formatting of the subsubsection won't be convertible to PDF bookmarks, because they can't take formatting. So one solution would be to remove formatting from the subsubsection header.
-    \item On the other hand, there is also the option to use \textbackslash texorpdfstring to separate headers for LaTeX and pdf bookmarks, that I found instructions for \href{https://tex.stackexchange.com/questions/53513/hyperref-token-not-allowed}{here}.
-    \item Find \& Replace All can fix the entire document at once again.
-\end{itemize}
-
-
-
 \newpage\section{Library of LaTeX Errors}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
     \item \ref{error:er1} Rich Text Mode 
     \item \ref{error:er2} Bullet List 
     \item \ref{error:er3} Using Packages
@@ -1140,14 +957,12 @@ was undefined.
     \item \ref{error:er9} Margins
     \item \ref{error:er10} Automatic Dating
     \item \ref{error:er11} Displaying Japanese Characters
-    \item \ref{error:er14} Undefined Control Sequence
-    \item \ref{error:er15} Hyperref Token Not Allowed
 \end{itemize}
 
 
 \section{Library of Data Carpentry Errors}
 \begin{itemize}
-\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemi}{$\nobullet$}
     \item \ref{error:er12} GUI/CLI Confusion
     \item \ref{error:er13} Shell: Command Not Found
 \end{itemize}
