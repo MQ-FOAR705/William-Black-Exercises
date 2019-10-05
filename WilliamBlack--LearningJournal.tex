@@ -8,22 +8,29 @@
 \graphicspath{ {./PoC Scoping Exercise/} }
 \usepackage{scrextend}
 
+\usepackage{CJKutf8}
+\newenvironment{Japanese}{%
+  \CJKfamily{min}%
+  \CJKtilde
+  \CJKnospace}{}
+%\begin{CJK}{UTF8}{}
+%\begin{Japanese}
 
 \title{\textbf{Learning Journal}}
 \date{Date of last edit: \today}
 \author{William Black 42920477}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.5em}
+\setcounter{secnumdepth}{3}
 
 \usepackage{hyperref}
+\urlstyle{same}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,      
     urlcolor=cyan,
 }
- 
-\urlstyle{same}
 
 \begin{document}
 
@@ -146,7 +153,7 @@ There's no way for me to know whether any of these pain relievers/gain creators 
 \section{12.08.19 - Data Carpentry: Spreadsheets}
 Since yesterday’s task was so surprisingly complicated, I might see how I do with Data Carpentry solo and keep the tricky parts to ask my friends tomorrow.
 
-\subsection{\textbf{\href{https://datacarpentry.org/spreadsheets-socialsci/00-intro/index.html}{Introduction}}}
+\subsection{\textbf{\href{https://datacarpentry.org/spreadsheets-socialsci/00-intro/index.html}{\textbf{Introduction}}}}
 \setlength{\parskip}{0.5em}
 
 
@@ -274,7 +281,7 @@ I don’t know if I’ve had that situation in the context of research… a few 
 
 \newpage\section{14.08.19 – Data Carpentry: Spreadsheets}
 
-\subsection{\textbf{\href{https://datacarpentry.org/spreadsheets-socialsci/02-common-mistakes/index.html}{Formatting Problems}}}
+\subsection{\textbf{\href{https://datacarpentry.org/spreadsheets-socialsci/02-common-mistakes/index.html}{\textbf{Formatting Problems}}}}
 
 \underline{Common Spreadsheet Errors}
 \begin{itemize}
@@ -417,7 +424,7 @@ I'm a bit confused about how to get an image in - I used one for explaining the 
 I had to add the package to the preamble. The directory is the directory on Overleaf, not my directory.
 
 You can set the width of the image to equal the text width with 
-\\$\backslash$includegraphics[width=$\backslash$textwidth]\{imagefilename\}
+\\\texttt{$\backslash$includegraphics[width=$\backslash$textwidth]\{imagefilename\}}
 \end{addmargin}
 
 \vspace{0.5em}
@@ -558,7 +565,7 @@ I'll start the document by copying the code from Scoping Exercise I, so I have a
 
 \subsubsection{\texorpdfstring{\underline{Error: Automatic Dating}}{}}\label{error:er10}
 \begin{itemize}
-    \item Just realised the $\backslash$date\{$\backslash$today\} trick is going to be the wrong date once the date changes.
+    \item Just realised the \texttt{$\backslash$date\{$\backslash$today\}} trick is going to be the wrong date once the date changes.
 \end{itemize}
 \begin{itemize}
 \renewcommand{\labelitemi}{}
@@ -674,7 +681,7 @@ After staring at these instructions for a couple of hours, here are all the thin
     \item Am I the one that's insane here? I know from 4 years of university study that usually when I'm confused, everyone else is just as confused as me but less likely to articulate it and be specific about it than I am. But still. This is a LOT of people who would be just guessing what to do and are satisfied with whatever result comes. Surely someone else is concerned about this??
 \end{itemize}
 
-\section{26.08.19 - Proof of Concept: Scoping Exercise II}
+\newpage\section{26.08.19 - Proof of Concept: Scoping Exercise II}
 \subsection{Computational Analysis: Decomposition, Patterns, Algorithm Design}
 Now I've had my questions cleared up by Shawn and Brian I can start the task. 
 
@@ -716,7 +723,7 @@ I also wonder how possible it would be to make something that interacts with... 
 \newpage
 \section{27.08.19 - Data Carpentry: Unix Shell}
 
-\subsection{\href{http://swcarpentry.github.io/shell-novice/01-intro/index.html}{Introducing the Shell}}
+\subsection{\href{http://swcarpentry.github.io/shell-novice/01-intro/index.html}{\textbf{Introducing the Shell}}}
 
 \color{gray}
 \underline{Questions}
@@ -770,7 +777,7 @@ First command to try is \$ 1s.
     \item Typed \texttt{\$1s}, returned: \\\texttt{bash:1s:command not found}
     \item Using a space between doesn't help, doubling the \$ doesn't help. The guide is suggesting I mistyped the command.
     
-    \includegraphics[width=\textwidth]{commandnotfound.PNG}
+    \includegraphics[scale=0.8]{commandnotfound.PNG}
 \end{itemize}
 \begin{itemize}
 \renewcommand{\labelitemi}{}
@@ -797,7 +804,7 @@ Nelle Nemo's done a 6 month survey sampling gelatinous marine life. She has 1520
 
 Clicking each file and running \texttt{goostats} one-by-one in the Gooey is going to take weeks of work and give Nemo RSI. Ironically, a CLI is going to be more efficient at handling her Gooey samples. :D
 
-\subsection{\href{http://swcarpentry.github.io/shell-novice/02-filedir/index.html}{Navigating Files and Directories}}
+\subsection{\href{http://swcarpentry.github.io/shell-novice/02-filedir/index.html}{\textbf{Navigating Files and Directories}}}
 
 \color{gray}
 \underline{Questions}
@@ -838,64 +845,70 @@ Typing command \texttt{ls} prints the names of files and directories in the CWD 
 \newpage
 \textbf{General syntax of a shell command}
 
-In the case of \texttt{\$ ls -F /},
-
-\texttt{\$} is the \textbf{prompt}.
-
-\texttt{ls} is the \textbf{command}.
-
-\texttt{-F} is an \textbf{option} (a type of \textbf{parameter}).
-
-\texttt{/} is an \textbf{argument} (a type of \textbf{parameter}).
+In the case of \texttt{\$ ls -F /}\begin{itemize}
+    \item \texttt{\$} is the \textbf{prompt}. 
+    \item \texttt{ls} is the \textbf{command}.
+    \item \texttt{-F} is an \textbf{option} (a type of \textbf{parameter}).
+    \item \texttt{/} is an \textbf{argument} (a type of \textbf{parameter}).
+\end{itemize}
 
 Commands can be called with multiple parameters, but parameters aren't required. Spaces are required to separate each part, and parts may be case-sensitive.
 
 \vspace{1em}
 \textbf{Getting help}
 
-\texttt{\$ls --help} provides a help option for a cheat sheet of available options.
-
-\texttt{man ls} does not work, but this is apparently fine as long as \texttt{--help} works.
+\texttt{\$ls --help} provides a help option for a cheat sheet of available options. (\texttt{man ls} does not work, but this is apparently fine as long as \texttt{--help} works.)
 
 \vspace{1em}
-\textcolor{gray}{What does the command ls do when used with the -l option? What about if you use both the -l and the -h option?}
+\color{gray}\begin{addmargin}[1cm]{0cm}
+\underline{Exercise:}
+
+What does the command ls do when used with the -l option? What about if you use both the -l and the -h option?
+
+\color{black}
 
 As it says in \texttt{--help}, it makes longer numbers easier to read for humans.
 
-\vspace{1em}
-\textcolor{gray}{The command \texttt{\$ls -R} lists the contents of directories recursively, i.e., lists their sub-directories, sub-sub-directories, and so on at each level. The command \texttt{\$ls -t} lists things by time of last change, with most recently changed files or directories first. In what order does \texttt{\$ls -R -t} display things?}
+\end{addmargin}
 
-Okay, first of all, do NOT try this on the home directory, this is taking forever. 
+\vspace{1em}
+\color{gray}\begin{addmargin}[1cm]{0cm}
+\underline{Exercise:}
+
+The command \texttt{\$ls -R} lists the contents of directories recursively, i.e., lists their sub-directories, sub-sub-directories, and so on at each level. The command \texttt{\$ls -t} lists things by time of last change, with most recently changed files or directories first. In what order does \texttt{\$ls -R -t} display things?
+
+\color{black}
+Okay so, first of all, do NOT try this on the home directory, this is taking forever. 
 
 I'm going to just close the CLI and reopen it.
 
 I can't seem to change my location yet, but when I can I'll perform this exercise on a smaller folder. \textcolor{teal}{\small{- 9:50am: The command lists all files in all directories, with files organised by timestamp within directories. This is easier to see if you add the option \texttt{-l} to make timestamps visible.}}
-
+\end{addmargin}
+\vspace{1em}
+\color{black}
 \texttt{\$ ls -F Desktop} lists the files in a different directory - this time, the Desktop.
 
 \texttt{\$ ls -F Desktop/data-shell} lists the files in Desktop/data-shell.
 
 \texttt{\$ cd Desktop} changes the cwd to Desktop.
-\\(- oh, now I can answer the previous question)
 
 \texttt{\$ cd ..} to return to parent directory.
 
 \texttt{\$ ls -F -a} includes the \texttt{-a} option to show All files and directories in cwd (\texttt{./}) and parent (\texttt{../}) directories.
 
-You can combine options by listing them after a single -, for example, \texttt{\$ ls -F -a} is an identical command to \texttt{\$ ls -Fa}
+You can combine options by listing them after a single \texttt{-}. E.g. \texttt{\$ ls -F -a} is an identical command to \texttt{\$ ls -Fa}
 
 \texttt{\$ cd} returns you to home directory.
 
 Although the guide suggests \texttt{\$ cd /Users/nelle/Desktop/data-shell} should take us to the data-shell directory, I can see from using \texttt{pwd} that in my case \texttt{\$ cd /c/Users} is required.
 
-\texttt{\textasciitilde} = home directory
-\texttt{\textasciitilde/Desktop} is identical to \texttt{/c/Users/twins/Desktop}
+\texttt{\textasciitilde} = home directory (\texttt{\textasciitilde/Desktop} is identical to \texttt{/c/Users/twins/Desktop})
 
-\texttt{-} = previous directory I was in
-\texttt{\$ cd -} takes you back a directory. Very handy.
+\texttt{-} = previous directory I was in (So \texttt{\$ cd -} takes you back a directory. Very handy.)
 
-\newpage
-\textcolor{gray}{Starting from /Users/amanda/data, which of the following commands could Amanda use to navigate to her home directory, which is /Users/amanda?
+\vspace{0.5em}
+\begin{addmargin}[1cm]{0cm}
+\textcolor{gray}{\underline{Exercise:}\vspace{0.5em}\\Starting from /Users/amanda/data, which of the following commands could Amanda use to navigate to her home directory, which is /Users/amanda?
 \begin{enumerate}
     \item \texttt{\$ cd .}
     \item \texttt{\$ cd /}
@@ -910,24 +923,27 @@ Although the guide suggests \texttt{\$ cd /Users/nelle/Desktop/data-shell} shoul
 
 I would guess only 5 and 9 would work. 
 
-Testing them out, I can see 8 also works, I forgot that shortcut. 7 also works, but is redundant.
+Testing them out, I can see 8 also works, I forgot that shortcut always takes you back to home directory. 7 also works, but is redundant.
 
+\vspace{0.5em}
+\textcolor{gray}{\underline{Exercise:}}
 \begin{center}
-\vspace{1em}
 \includegraphics[scale=1]{relativepathresolution.PNG}
 \end{center}
 
-Answer should be 4.
+Answer should be 4. Solution agrees.
 
 \newpage
+\textcolor{gray}{\underline{Exercise:}\vspace{0.5em}}
 \begin{center}
 \vspace{1em}
 \includegraphics[scale=1]{readingcomprehension.PNG}
 \end{center}
 
 I imagine 2 and 3 would work. 3 seems redundant.
+\end{addmargin}
 
-\section{29.08.19 - Proof of Concept: Elaboration I}
+\newpage\section{29.08.19 - Proof of Concept: Elaboration I}
 
 \subsection{Planning the Proof of Concept}
 
@@ -948,8 +964,8 @@ The more I look into macros the more it seems like everything I would do for thi
 
 Coming up with ways to "test" this process is arduous but a good exercise, because it's really made me think about how to chunk the problem and aim for the fastest way to fail possible. 
 
-\section{30.08.19 - Data Carpentry}
-\subsection{\href{http://swcarpentry.github.io/shell-novice/03-create/index.html}{Working With Files and Directories}}
+\newpage\section{30.08.19 - Data Carpentry: Unix Shell}
+\subsection{\href{http://swcarpentry.github.io/shell-novice/03-create/index.html}{\textbf{Working With Files and Directories}}}
 
 \color{gray}
 \underline{Questions}
@@ -958,6 +974,7 @@ How can I create, copy, and delete files and directories?
 
 How can I edit files?
 
+\vspace{1em}
 \underline{Objectives}
 
 Create a directory hierarchy that matches a given diagram.
@@ -979,6 +996,7 @@ Delete, copy and move specified files and/or directories.
 
 Use the nano screen to write/edit the document, and use \textsuperscript{$\wedge$}O to "write out" (this means save, apparently). The shortcuts are at the bottom, and the carat \textsuperscript{$\wedge$} mark means Ctrl+. E.g. \textsuperscript{$\wedge$}X Exit means press Ctrl+X to exit.
 
+\begin{addmargin}[1cm]{0cm}
 \vspace{1em}
 \color{gray}
 \underline{Exercise:}
@@ -990,17 +1008,15 @@ We have seen how to create text files using the nano editor. Now, try the follow
     \item Use ls -l to inspect the files. How large is my\_file.txt?
     \item When might you want to create a file this way?
 \end{enumerate}
-
-\vspace{2em}
 \color{black}
 \begin{enumerate}
     \item It seems to have made an empty file, it does show up on my Gooey.
     \item Looks like it's 0b
     \item Perhaps you need an empty file for another program to refer to, like how in spreadsheets you might need a zero in some cells rather than leaving the data empty? - Reading the solution, it seems that answer is more or less right. Some programs need the file to at least exist before they can populate it with information. 
 \end{enumerate}
+\end{addmargin}
 
-\vspace{1em}
-\textbf{Moving files and directories}
+\newpage\textbf{Moving files and directories}
 
 \texttt{\$ mv draft.txt coffee.txt} uses move command to change the name of the file from "draft.txt" to "coffee.txt".
 
@@ -1008,6 +1024,7 @@ We have seen how to create text files using the nano editor. Now, try the follow
 
 Similarly, \texttt{\$ mv billys\_folder/coffee.txt .} would move coffee.txt from within billys\_folder to the cwd.
 
+\begin{addmargin}[1cm]{0cm}
 \vspace{1em}
 \color{gray}
 \underline{Exercise:}
@@ -1029,6 +1046,7 @@ Fill in the blanks to move these files to the current folder (i.e., the one she 
 \vspace{1em}
 \color{black}
 After confirming on my own computer that you can move more than one file at once, the command should be: \texttt{\$ mv analyzed/sucrose.dat analyzed/maltose.dat .}, because "." represents the cwd.
+\end{addmargin}
 
 \vspace{1em}
 \textbf{Copying files and directories}
@@ -1045,8 +1063,12 @@ After confirming on my own computer that you can move more than one file at once
 
 \texttt{?} is a wildcard for a single character. 
 
+\begin{addmargin}[1cm]{0cm}
 \color{gray}
-When run in the molecules directory, which ls command(s) will produce \texttt{ethane.pdb methane.pdb}?
+\vspace{1em}\underline{Exercise:}
+
+When run in the molecules directory, which ls command(s) will produce 
+\\\texttt{ethane.pdb methane.pdb}?
 \\1. ls *t*ane.pdb
 \\2. ls *t?ne.*
 \\3. ls *t??ne.pdb
@@ -1056,8 +1078,11 @@ When run in the molecules directory, which ls command(s) will produce \texttt{et
 1 and 3. - Solution says not 1, because you would also catch octane.pdb and pentane.pdb. Fair point.
 
 \color{gray}
+\vspace{1em}\underline{Exercise:}
+
 Sam has a directory containing calibration data, datasets, and descriptions of the datasets. Before heading off to another field trip, she wants to back up her data and send some datasets to her colleague Bob. Sam uses the following commands to get the job done.
-\\Help Sam by filling in the blanks.
+
+Help Sam by filling in the blanks.
 \begin{verbatim}
 $ cp *dataset* backup/datasets
 $ cp ____calibration____ backup/calibration
@@ -1072,13 +1097,15 @@ $ cp *calibration.txt backup/calibration
 $ cp 2015-11-* send_to_bob/all_november_files/
 $ cp *-23-dataset* send_to_bob/all_datasets_created_on_a_23rd/  
 \end{verbatim}
+\end{addmargin}
+
 Solution agrees!
 
 The other exercises were a bit too easy to be bothered journalling.
 
 So far, although I can understand the purpose of using a CLI over the Gooey, it's hard to come up with any scenario where it could regularly be useful. Even copying/moving files can be done in a similar way in the Gooey by using the search function, selecting all of them, and copying/moving them where you wish.
 
-\section{30.08.19 - LaTeX Error Clean Up}
+\newpage\section{30.08.19 - LaTeX Error Clean Up}
 \subsection{LaTeX}
 
 Compiling this document returns 108 Errors, despite compiling and reading normally. I might be just good enough to fix a lot of these by now.
@@ -1124,7 +1151,929 @@ was undefined.
     \item Find \& Replace All can fix the entire document at once again.
 \end{itemize}
 
+\newpage\section{31.08.19 - Data Carpentry: Unix Shell}
+\subsection{\href{http://swcarpentry.github.io/shell-novice/04-pipefilter/index.html}{\textbf{Pipes and Filters}}}
 
+\color{gray}
+\underline{Questions}
+
+How can I combine existing commands to do new things?
+
+\underline{Objectives}
+
+Redirect a command’s output to a file.
+
+Process a file instead of keyboard input using redirection.
+
+Construct command pipelines with two or more stages.
+
+Explain what usually happens if a program or pipeline isn’t given any input to process.
+
+Explain Unix’s ‘small pieces, loosely joined’ philosophy.
+
+\color{black}
+
+\vspace{1em}
+\textbf{Word Count}
+
+\texttt{\$ wc *.pdb} lists number of lines, words, characters, in that order. \texttt{\$ wc -l *.pdb} does the same, to count lines only.
+
+
+Intention: As there are only .pdb files in the folder, I attempted to do this without specifying *.pdb, to see if it would run on them all anyway
+
+Action: \texttt{\$ wc -l}
+
+Result: An alarming lack of result, no "loop" phase to return to the part where it awaits my next command.
+
+\subsubsection{\texorpdfstring{\underline{Error: Shell: Does Not Print Or Loop}}{}}\label{error:er16}
+\begin{itemize}
+    \item After typing command \texttt{\$ wc -l}, REPL system does not Print or Loop. 
+    \item This may be because \texttt{wc} is a command, \texttt{-l} is an option, but I haven't given any file to apply the command to.
+\end{itemize}
+\begin{itemize}
+\renewcommand{\labelitemi}{}
+\item \underline{Solution:}
+\renewcommand{\labelitemi}{$\bullet$}
+    \item Intention: I tried Ctrl+D to disconnect, and reopen GitBash.
+    
+    Action: \texttt{\textsuperscript{$\wedge$}D}
+    
+    Result: Actually it doesn't disconnect as usual, it Prints a numeral that counts the number of extra entries I've made since the error and Loops back for my next command.
+    
+    \item The next section of the lesson explains I can also use Ctrl+C to Cancel the command.
+\end{itemize}
+
+Intention: Following my original logic, if * is a wildcard then it should stand for .pdb as well as other letters in the file. 
+
+Action: \texttt{\$ wc -l *}
+
+Result: \texttt{*} works identically to \texttt{*.pdb}
+
+\vspace{1em}
+\textbf{Redirecting output to a file}
+
+\texttt{>} Redirects output to a file instead of Print-ing it. 
+
+\texttt{\$ wc -l *.pdb > lengths.txt}, for example, will print the line lengths to a new file called lengths.txt, or overwrite a file called lengths.txt if it already exists.
+
+\newpage\textbf{Viewing contents of .txt file}
+
+\texttt{\$ cat} is a command to concatenate and Print file contents.
+
+Intention: It should work to concatenate and Print all these files by using *.
+
+Action: \texttt{\$ cat *}
+
+Result: Works.
+
+Intention: The lesson suggests \texttt{\$ cat lengths.txt} but \texttt{*xt} should also work because it's the only .txt file.
+
+Action: \texttt{\$ cat *xt}
+
+Result: Also works. 
+
+If there are many files, you can limit the contents to just one screenful with \texttt{\$ less lengths.txt}. Spacebar to go forward, \texttt{b} to go backward, \texttt{q} to quit.
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\vspace{1em}\underline{Exercise:}
+
+If we run \texttt{sort} on a file the output is:
+\begin{verbatim}
+10
+19
+2
+22
+6
+\end{verbatim}
+If we run \texttt{sort -n} on the same input, we get this instead:
+\begin{verbatim}
+2
+6
+10
+19
+22
+\end{verbatim}
+Explain why \texttt{-n} has this effect.
+
+\vspace{1em}
+\color{black}
+Presumably, \texttt{sort} arranges numbers lexicographically by default unless you add the option \texttt{-n} to request numeric arrangement.
+\end{addmargin}
+
+Intention: Sort lengths numerically and output to file called \texttt{sorted-lengths.txt}, retrieve first 3 lines to Print
+
+Action: \texttt{\$ sort -n len* > sorted-lengths.txt}; \texttt{\$ head 3 sor*}
+
+Result: \texttt{Cannot open '3' for reading: No such file or directory} It appears the shell has taken the 3 to be the file, and the 3 must be attached to the option of \texttt{-n}.
+
+Intention: Attach 3 to \texttt{-n} option to retrieve first 3 lines to Print.
+
+Action: \texttt{\$ head -n 3 sor*}
+
+Result: Success.
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+Test the commands below to reveal the difference between the two operators:
+
+\texttt{\$ echo hello > testfile01.txt} and \texttt{\$ echo hello >> testfile02.txt}
+
+\color{black}
+I can see from using \texttt{\$ cat tes*} that \texttt{>} overwrites the file while \texttt{>>} adds the echo to it.
+\end{addmargin}
+
+\newpage
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\vspace{1em}\underline{Exercise:}
+
+We have already met the head command, which prints lines from the start of a file. tail is similar, but prints lines from the end of a file instead.
+
+Consider the file data-shell/data/animals.txt. After these commands, select the answer that corresponds to the file animals-subset.txt:
+\begin{verbatim}
+$ head -n 3 animals.txt > animals-subset.txt
+$ tail -n 2 animals.txt >> animals-subset.txt
+\end{verbatim}
+1. The first three lines of animals.txt
+\\2. The last two lines of animals.txt
+\\3. The first three lines and the last two lines of animals.txt
+\\4. The second and third lines of animals.txt
+
+\vspace{1em}
+\color{black}
+
+3. Solution agrees.
+\end{addmargin}
+
+\textbf{Pipes}
+
+Vertical bar [\texttt{|}] is a pipe, it means the  output of the command left of the pipe is the input of the command to the right.
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\vspace{1em}\underline{Exercise:}
+
+In our current directory, we want to find the 3 files which have the least number of lines. Which command listed below would work?
+
+1. \texttt{\$ wc -l * > sort -n > head -n 3}
+\\2. \texttt{\$ wc -l * | sort -n | head -n 1-3}
+\\3. \texttt{\$ wc -l * | head -n 3 | sort -n}
+\\4. \texttt{\$ wc -l * | sort -n | head -n 3}
+
+\vspace{1em}
+\color{black}
+
+4. Solution agrees.
+\end{addmargin}
+
+\textbf{Filters}
+
+Filters are programs like \texttt{wc} or \texttt{sort} that turn inputs to outputs.
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\vspace{1em}\underline{Exercise:}
+
+A file called \texttt{animals.txt} contains the following data:
+
+\begin{verbatim}
+2012-11-05,deer
+2012-11-05,rabbit
+2012-11-05,raccoon
+2012-11-06,rabbit
+2012-11-06,deer
+2012-11-06,fox
+2012-11-07,rabbit
+2012-11-07,bear
+\end{verbatim}
+What text passes through each of the pipes and the final redirect in the pipeline below?
+
+\texttt{\$ cat animals.txt | head -n 5 | tail -n 3 | sort -r > final.txt}
+
+\vspace{1em}
+\color{black}
+
+Print contents, then take the top five entries, and the bottom three entries (... so all of them then), sort in reverse order, and output the list in a file called \texttt{final.txt}. So it should create a document in the cwd with the same list backwards. Testing that out, that's not what happens! 
+\end{addmargin}
+
+{\subsubsection{\texorpdfstring{\underline{Error: Shell: Pipe Functionality}}{}}\label{error:er17}
+\begin{itemize}
+  \item Expected above exercise to result in reversed list of \texttt{animals.txt}, but returned \begin{verbatim}
+    2012-11-06,rabbit
+    2012-11-06,deer
+    2012-11-05,raccoon
+  \end{verbatim} 
+\end{itemize}
+\begin{itemize}
+\renewcommand{\labelitemi}{}
+\item \underline{Solution:}
+\renewcommand{\labelitemi}{$\bullet$}
+  \item `Print contents, then take the top five entries, \textit{and} the bottom three entries, sort in reverse order, and output to \texttt{final.txt}.' - `and' is where I went wrong. Pipe does `then', but never `and'.
+  \item It should be: "Print contents, then take top five entries, THEN take bottom three entries of those five, then sort in reverse order, and output to \texttt{final.txt}.
+  \item I was confused why rabbit and deer are in the same order as in the original file but now I'm seeing the original file was not in lexicographic order in the first place, it was sorted by date and unsorted past that. 
+\end{itemize}}
+
+\textbf{Displaying specific fields}
+
+\texttt{cut} "cuts out" and isolates sections of each line. By default it expects fields to be separated by \texttt{tab}s but you can define a delimiter with \texttt{-d x}, where x is the character used as a delimiter.
+
+\textbf{Displaying unique instances}
+
+\texttt{uniq} command filters out adjacent identical lines in the file.
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\vspace{1em}\underline{Exercise:}
+
+How could you extend this pipeline (using \texttt{uniq} and another command) to find out what animals the file contains (without any duplicates in their names)?
+
+\texttt{\$ cut -d , -f 2 animals.txt}
+
+\begin{verbatim}
+2012-11-05,deer
+2012-11-05,rabbit
+2012-11-05,raccoon
+2012-11-06,rabbit
+2012-11-06,deer
+2012-11-06,fox
+2012-11-07,rabbit
+2012-11-07,bear
+\end{verbatim}
+
+\color{black}
+
+\texttt{\$ cut -d , -f 2 animals.txt | sort | uniq}
+
+...? Success!
+
+\end{addmargin}
+
+\newpage
+\textbf{Counting and displaying unique instances}
+
+You can use the option \texttt{-c} with the command \texttt{uniq} to display a count of number of instances next to each unique item.
+
+Intention: Display how many times each animal appears in \texttt{animals.txt}
+
+Action: \texttt{\$ cut -d , -f 2 animals.txt | sort | uniq -c}
+
+Result:\begin{verbatim}
+    1 bear
+    2 deer
+    1 fox
+    3 rabbit
+    1 raccoon
+\end{verbatim}
+
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\vspace{1em}\underline{Exercise:}
+
+The wildcard expression \texttt{*[AB].txt} matches all files ending in \texttt{A.txt} or \texttt{B.txt}. Imagine you forgot about this.
+\begin{enumerate}
+    \item Can you match the same set of files with basic wildcard expressions that do not use the \texttt{[]} syntax? Hint: You may need more than one expression.
+    \item The expression that you found and the expression from the lesson match the same set of files in this example. What is the small difference between the outputs?
+    \item Under what circumstances would your new expression produce an error message where the original one would not?
+\end{enumerate}
+
+\color{black}
+\begin{enumerate}
+    \item You'd have to do \texttt{*A.txt} and \texttt{*B.txt} one after the other
+    \item The outputs would be separate, so they wouldn't be in their order as a mixed list.
+    \item ... I give up, I'm testing it out but I can't find any.
+    
+    Solution says "When there are no files ending in \texttt{A.txt}, or there are no files ending in \texttt{B.txt}." - I don't think that's true, it still works correctly if I type in \texttt{*[ABC].txt}. And \texttt{*[BC].txt} also works correctly, only returning the ones ending in B.txt. 
+    - \textcolor{teal}{\small{4:02pm Apparently the `new' expression in question is the wildcard we've been using all week, and the `old' one is the one we've just learnt 
+\begin{CJK}{UTF8}{}
+\begin{Japanese}
+\textbackslash\_(ツ)\_/
+\end{Japanese}
+\end{CJK}}}
+\end{enumerate}
+\end{addmargin}
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+Suppose you want to delete your processed data files, and only keep your raw files and processing script to save storage. The raw files end in .dat and the processed files end in .txt. Which of the following would remove all the processed data files, and only the processed data files?
+
+1. rm ?.txt
+\\2. rm *.txt
+\\3. rm * .txt
+\\4. rm *.*
+
+\color{black}
+2. Solution agrees.
+\end{addmargin}
+
+\newpage\section{02.09.19 - Data Carpentry: Unix Shell}
+\subsection{\href{http://swcarpentry.github.io/shell-novice/05-loop/index.html}{\textbf{Loops}}}
+\color{gray}
+\underline{Questions}
+
+How can I perform the same actions on many different files?
+
+\vspace{1em}
+\underline{Objectives}
+
+Write a loop that applies one or more commands separately to each file in a set of files.
+
+Trace the values taken on by a loop variable during execution of the loop.
+
+Explain the difference between a variable’s name and its value.
+
+Explain why spaces and some punctuation characters shouldn’t be used in file names.
+
+Demonstrate how to see what commands have recently been executed.
+
+Re-run recently executed commands without retyping them.
+
+\color{black}
+\vspace{1em}\textbf{Loops}
+
+Loops repeat commands for each item in a list. They look like:
+
+\texttt{\$ \textbf{for} thing \textbf{in} thinglist
+\\\textbf{do}
+\\    verbwith \$thing (pipes etc here)
+\\\textbf{done}}
+
+\textbf{Intention}: Try to get second line of each file
+
+\textbf{Action}: \vspace{-1em}\begin{verbatim}
+$ for filename in *
+> do
+> head -n 2 $filename | tail -n 1
+> done
+\end{verbatim}
+\textbf{Result}: \vspace{-1em}\begin{verbatim}
+CLASSIFICATION: basiliscus vulgaris
+CLASSIFICATION: bos hominus
+CLASSIFICATION: equus monoceros
+\end{verbatim}
+
+I had to do this twice because I tried to make an indentation in the loop with \texttt{tab} and the shell stopped functioning until I pressed \texttt{\textsuperscript{$\wedge$}C}.
+
+It didn't need to be "filename", it could have been "x" or anything. Good news, you don't need to remember a bunch of types of thing, but keep yourself sane by making your labels intuitive.
+
+\newpage\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\vspace{1em}\underline{Exercise:}
+
+What is the output of the following code?
+\vspace{-1em}\begin{verbatim}
+$ for datafile in *.pdb
+> do
+>    ls *.pdb
+> done    
+\end{verbatim}\vspace{-0.5em}
+Now, what is the output of the following code?
+\vspace{-1em}\begin{verbatim}
+$ for datafile in *.pdb
+> do
+>	ls $datafile
+> done
+\end{verbatim}\vspace{-0.5em}
+Why do these two loops give different outputs?
+
+\color{black}
+The first one says "for each file of .pdb, list all the .pdbs", so it prints all the .pdbs 6 times, once for each file.
+
+The second code says "for each file of .pdb, list the file", so it prints the file for each file.
+\end{addmargin}
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\vspace{1em}\underline{Exercise:}
+
+What is the output of the following code?
+\vspace{-1em}\begin{verbatim}
+for alkanes in *.pdb
+do
+    echo $alkanes
+    cat $alkanes > alkanes.pdb
+done
+\end{verbatim}\vspace{-0.5em}
+
+\color{black}
+"For each file of .pdb, print each file. For each file of .pdb, concatenate and print the text in a new file called alkanes.pdb". Because only one \textgreater  is used, the file is overwritten each time. 
+\end{addmargin}
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\vspace{1em}\underline{Exercise:}
+
+What is the output of the following code?
+\vspace{-1em}\begin{verbatim}
+for datafile in *.pdb
+do
+    cat $datafile >> all.pdb
+done
+\end{verbatim}\vspace{-0.5em}
+
+\color{black}
+"For each file of .pdb, concatenate and print the text additively in a new file called all.pdb". Because two \textgreater\textgreater are used, the file has text of each file. 
+\end{addmargin}
+
+\textbf{Using echo}
+
+A lot of loops you use may do something you can't see the effect of quickly. You could just check every time you've done something that it's done what you expected, but if your brain can handle breaking a tiny bit further to put \texttt{echo} at the beginning, you can also see the program's report of what it's done. 
+
+Below is a screenshot of me testing if my code
+\vspace{-1em}\begin{verbatim}
+$ for filename in *.dat
+> do
+>     cp $filename original-$filename
+> done
+\end{verbatim}\vspace{-1em}
+worked, once the easy verbose way, and once the concise way.
+
+\begin{center}
+\includegraphics[scale=1]{usingecho.PNG}    
+\end{center}
+
+The best part is that if the program is taking ages to run you can see what it's up to and have an idea if you have time to make a coffee.
+
+You can also use \texttt{echo} to get an idea of what the real command is going to do to what files.
+
+\newpage\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\vspace{1em}\underline{Exercise:}
+
+What is the difference between the two loops below, and which one would we want to run to preview what will happen?
+\vspace{-1em}\begin{verbatim}
+$ for file in *.pdb
+> do
+>   echo analyze $file > analyzed-$file
+> done
+
+$ for file in *.pdb
+> do
+>   echo "analyze $file > analyzed-$file"
+> done
+\end{verbatim}\vspace{-0.5em}
+\color{black}
+I don't know. We haven't done quotation marks yet. I also don't know what the command "analyze" does yet, presumably that's a program. 
+
+I guess in Version 1, it says "for every file of *pdb, print the fact that you're running the analyze program on each file and outputting the result in a file called "analyzed-[whatever the filename was]"".
+
+Maybe Version 2 would just print what would happen without executing it, or perhaps it would literally print "analyze \$file $>$ analyzed-\$file"
+
+Testing it on Nelle's NENE documents, I can see the quotes just show how the loop would apply to each file without executing it.
+\end{addmargin}
+
+\vspace{1em}
+\textbf{History shortcuts}
+
+Ctrl-R enters a history search mode “reverse-i-search” and finds the most recent command in your history that matches the text you enter next. Press Ctrl-R more times to search for earlier matches.
+
+!! retrieves the immediately preceding command
+
+!\$ retrieves the last word of the last command. That’s useful more often than you might expect: after bash goostats NENE01729B.txt stats-NENE01729B.txt, you can type \texttt{less !\$} to look at the file stats-NENE01729B.txt, which is quicker than doing up-arrow and editing the command-line.
+
+\vspace{1em}
+\textbf{Nested loops}
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+What would be the result of the following code:
+\vspace{-1em}\begin{verbatim}
+$ for species in cubane ethane methane
+> do
+>     for temperature in 25 30 37 40
+>     do
+>         mkdir $species-$temperature
+>     done
+> done
+\end{verbatim}\vspace{-0.5em}
+\color{black}
+I really don't know, there aren't any files called 25 30 37 40. I don't know what those numbers could be. There are also no files called cubane ethane methane, I would have thought you needed .pdb. 
+
+Testing it myself. I got those four numbered directories for each file. Okay... so the code said...
+
+"for every file of cubane/ethane/methane, make a directory (called file-number) for every number of 25/30/37/40"
+
+I guess I get that. I would never have guessed it without testing though.
+\end{addmargin}
+
+\newpage\section{03.09.19 - Data Carpentry: Unix Shell}
+\subsection{\href{http://swcarpentry.github.io/shell-novice/06-script/index.html}{\textbf{Shell Scripts}}}
+\color{gray}
+\underline{Questions}
+
+How can I save and re-use commands?
+
+\underline{Objectives}
+
+Write a shell script that runs a command or series of commands for a fixed set of files.
+
+Run a shell script from the command line.
+
+Write a shell script that operates on a set of files defined by the user on the command line.
+
+Create pipelines that include shell scripts you, and others, have written.
+\color{black}
+
+\vspace{1em}
+\textbf{Shell Scripts}
+
+Shell scripts are a bunch of commands saved in a file to be re-run later when you type a single command word. 
+
+\texttt{\$ nano newscript.sh} opens nano. Type in the script, then \texttt{\textsuperscript{$\wedge$}O} to save ("write out") to the folder to be run in, \texttt{\textsuperscript{$\wedge$}X} to exit, \texttt{\$ bash newscript.sh} to run.
+
+\textbf{Argument Placeholders}
+
+In the .sh script, you can use \texttt{"\$1"} and further numbers to indicate 1st/2nd/etc argument.
+
+If you wanted to get the middle 50 lines from your 150-line data sheets: \texttt{head -n 100 "\$1" | tail -n 50} To run: \texttt{\$ bash newscript.sh desiredfile.txt} - the quotes around the \$1 is to get around the same issue as names with spaces.
+
+To take this further and make it more customisable, the .sh script could be \texttt{head -n "\$2" "\$1" | tail -n "\$3"} To run: \texttt{\$ bash newscript.sh desiredfile.txt 100 50} or whatever numbers you'd like to run.
+
+To keep yourself sane, add comments with \#; 
+\\\texttt{\# For selecting lines from the middle of a document}
+\\\texttt{\# Usage: \$ bash newscript.sh desiredfile.txt num\_oflastline num\_oflines}
+
+If you need infinite arguments, you can use "\$@". Lesson example:
+\vspace{-1em}\begin{verbatim}
+    $ nano sorted.sh
+    # Sort files by their length.
+    # Usage: bash sorted.sh one_or_more_filenames wc -l "$@" | sort -n
+    $ bash sorted.sh *.pdb ../creatures/*.dat
+\end{verbatim}\vspace{-1em} This is a good example of when you might need multiple arguments because * would not be enough when they're in different locations.
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\vspace{1em}\underline{Exercise:}
+
+Write a shell script called species.sh that takes any number of filenames as command-line arguments, and uses a variation of the above command to print a list of the unique species appearing in each of those files separately.
+\color{black}
+
+\vspace{-1em}\begin{verbatim}
+# Outputs unique items in desired field of any csv files
+# To use: $ bash species.sh commasep.file num_offield
+cut -d , -f "$2" "$1" | sort | uniq
+\end{verbatim}\vspace{-0.5em}
+This works, but the solution has a different answer using "\$@", so re-reading the question I guess it means any number of filenames \textit{at once}. I'll try again. Does using "\$@" exclude me from using "\$1"? It must, right? Well the user is stuck with the second field then.
+\vspace{-1em}\begin{verbatim}
+# Outputs unique items in the second field of any number of csv files
+# To use: $ bash species.sh commasep.file num_offield
+cut -d , -f 2 "$@" | sort | uniq
+\end{verbatim}\vspace{-1em}
+Okay the solution is still different but just because they did something fancier:
+\vspace{-1em}\color{gray}\begin{verbatim}
+# Loop over all files
+for file in $@
+do
+    echo "Unique species in $file:"
+    # Extract species names
+    cut -d , -f 2 $file | sort | uniq
+done
+\end{verbatim}\color{black}\vspace{-0.5em}
+This is better just because when I run that, it'll be way more intuitive to understand what I'm reading. This is a good practice to get into, \texttt{echo}-ing what's about to happen in the code.
+\end{addmargin}
+
+\vspace{0.5em}\textbf{Recording the awesome thing you did to a script}
+
+If you've done something correctly and want to make a script out of it to recreate it/recreate it for other files, you can do: \texttt{\$ history | tail -n 5 > scripttoupdatelog.sh} or however many lines to put your stuff in the script. Then you just need to edit out the line numbers and make the code fit your needs.
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+In the \texttt{molecules} directory, imagine you have a shell script called \texttt{script.sh} containing the following commands:
+
+\vspace{-1em}\begin{verbatim}
+head -n $2 $1
+tail -n $3 $1
+\end{verbatim}\vspace{-1em}
+While you are in the \texttt{molecules} directory, you type the following command:
+\vspace{-1em}\begin{verbatim}
+bash script.sh '*.pdb' 1 1
+\end{verbatim}\vspace{-1em}
+Which of the following outputs would you expect to see?
+
+\begin{enumerate}\vspace{-0.5em}
+\item All of the lines between the first and the last lines of each file ending in .pdb in the molecules directory
+\item The first and the last line of each file ending in .pdb in the molecules directory
+\item The first and the last line of each file in the molecules directory
+\item An error because of the quotes around *.pdb
+\end{enumerate}
+
+\color{black}\vspace{-0.5em}
+The script says 
+\\\texttt{head -n 1 '*.pdb'}
+\\\texttt{tail -n 1 '*.pdb'}
+\\So I guess it would be 2. I don't think the quotes are a problem, but it would have been easier to include the quotes in the script rather than the run command.
+\end{addmargin}
+
+\newpage\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+Write a shell script called \texttt{longest.sh} that takes the name of a directory and a filename extension as its arguments, and prints out the name of the file with the most lines in that directory with that extension. For example:
+
+\texttt{\$ bash longest.sh /tmp/data pdb} 
+
+would print the name of the \texttt{.pdb} file in \texttt{/tmp/data} that has the most lines.
+
+\vspace{1em}
+\color{black}
+Wow. Tough. 
+
+\textbf{Intention:} First I want to know what file is the longest.
+
+\textbf{Action:} \texttt{\$ wc -l * | sort}
+
+\textbf{Result:} The full list of files with the longest at the bottom.
+
+\vspace{1em}
+\textbf{Intention:} Get that file
+
+\textbf{Action:} \texttt{\$ wc -l * | sort | tail -n 1}
+
+\textbf{Result:} \texttt{5118 total} 
+- oh right. So it's the second-last line actually.
+
+\textbf{Action:} \texttt{\$ wc -l * | sort | tail -n 2 | head -n 1}
+
+\textbf{Result:} \texttt{300 NENE02043B.txt} 
+Great!
+
+\vspace{1em}
+\textbf{Intention:} Getting there with a directory
+
+\textbf{Action:} \texttt{\$ wc -l ~/desktop/data-shell* *.* | sort | tail -n 2 | head -n 1
+}
+
+\textbf{Result:} \texttt{wc: /c/Users/twins/desktop/data-shell: Is a directory
+\\    300 NENE02043B.txt} - seems suspiciously functional. Fluke? 
+
+\vspace{1em}
+\textbf{Intention:} I'll test it on my own desktop.
+
+\textbf{Action:} \texttt{\$ wc -l ~/desktop/* *.* | sort | tail -n 2 | head -n 1
+}
+
+\textbf{Result:}
+\vspace{-1em}\begin{verbatim}
+wc: /c/Users/twins/desktop/data-shell: Is a directory
+wc: /c/Users/twins/desktop/emulators: Is a directory
+wc: '/c/Users/twins/desktop/Learn French': Is a directory
+wc: '/c/Users/twins/desktop/new 3ds crack': Is a directory
+   6432200 /c/Users/twins/desktop/SL Training 2.zip
+\end{verbatim}\vspace{-1em}
+Hunh! I have a couple of other folders that didn't make the list, like 'SL Training 1.zip', I wonder why. But that is a very believable result, that training course is my weekend job and it takes a weekend to get through.
+
+\textbf{Intention:} Write shell script.
+
+\textbf{Action:} \texttt{\$ history | tail -n 2 > longest.sh}
+\vspace{-1em}\begin{verbatim}
+# Outputs line count and name of file with longest line count
+# Usage: $ bash longest.sh directory ext
+# e.g.   $ bash longest.sh desktop txt
+wc -l "~/$1/" "*.$2" | sort | tail -n 2 | head -n 1
+\end{verbatim}\vspace{-1em}
+
+\textbf{Result:}
+\vspace{-1em}\begin{verbatim}
+$ bash longest.sh desktop/data-shell txt
+wc: /c/Users/twins/desktop/data-shell/: Is a directory
+    300 NENE02043B.txt
+\end{verbatim}
+
+
+AAAAYYYYY!
+\end{addmargin}
+
+\newpage
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+Explain what each of the following three scripts would do when run as \texttt{bash script1.sh *.pdb}, \texttt{bash script2.sh *.pdb}, and \texttt{bash script3.sh *.pdb} respectively.
+
+\vspace{-1em}\begin{verbatim}
+# Script 1
+echo *.*
+
+# Script 2
+for filename in $1 $2 $3
+do
+    cat $filename
+done
+
+# Script 3
+echo $@.pdb
+\end{verbatim}
+
+\color{black}\vspace{-0.5em}
+Script 1: echo *.* *.pdb
+\\This should print all files in the cwd of any extension, and all .pdb files.
+
+Script 2: for x in *.pdb \$2 \$3; do cat \$x; done
+\\This should print the contents of all .pdb files in the cwd, and perhaps return an error for \$2 and \$3.
+
+Script 3: echo *.pdb.pdb
+\\This should probably return an error, "file *.pdb.pdb not found" or something like that.
+
+Solution says I'm wrong 3-for-3. So I'll just write the scripts and test them out.
+
+\vspace{1em}
+Script 1: echo *.*
+\\*.pdb isn't registered at all because there's no \$1 in the shell script.
+\\It prints all files in the cwd of any extension.
+
+Script 2: for x in *.pdb *.pdb *.pdb; do cat \$x; done
+\\Apparently the one argument just applies itself to all argument placeholders for some reason. Since everything else so far in the shell has never done anything without explicit and specific instruction, I really don't see why it would work this way.
+\\It prints the contents of the first three files found to match *.pdb
+
+Script 3: echo *.pdb.pdb
+\\I forgot echo prints stuff even when it's not printing what you want.
+\\It prints all the .pdb files, followed by .pdb.
+
+Solution is now happy.
+\end{addmargin}
+
+\vspace{1em}
+\textbf{Bash -x shellscript.sh}
+
+When the script doesn't run as expected, you can add option -x to see each command as it's run, which will show you where the program is going wrong.
+
+
+
+\newpage\section{05.10.19 - Data Carpentry: Unix Shell}
+\subsection{\href{http://swcarpentry.github.io/shell-novice/07-find/index.html}{\textbf{Finding Things}}}
+\color{gray}
+\underline{Questions}
+
+How can I find files?
+
+How can I find things in files?
+
+\underline{Objectives}
+
+Use grep to select lines from text files that match simple patterns.
+
+Use find to find files and directories whose names match simple patterns.
+
+Use the output of one command as the command-line argument(s) to another command.
+
+Explain what is meant by ‘text’ and ‘binary’ files, and why many common tools don’t handle the latter well.
+\color{black}
+
+\vspace{1em}\textbf{Grepping}
+
+\textbf{GREP} = To do a \textbf{global} search for a \textbf{regular expression} and \textbf{print} it.
+
+\texttt{\$ grep The example.txt}
+
+Grepping "The" will return The, Thesis, Thesaurus etc. 
+
+\texttt{\$ grep -w The example.txt}
+
+Adding option \texttt{-w} limits matches by word boundaries, returning only The. For phrases with spaces, use quotation marks as always.
+
+Adding option \texttt{-n} adds enumeration of what line the text appears.
+
+Adding option \texttt{-i} makes search case-insensitive.
+
+Adding option \texttt{-v} inverts search.
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+Which command would result in the following output: 
+
+\texttt{and the presence of absence:}
+
+1. \texttt{\$ grep "of" haiku.txt}
+\\2. \texttt{\$ grep -E "of" haiku.txt}
+\\3. \texttt{\$ grep -w "of" haiku.txt}
+\\4. \texttt{\$ grep -i "of" haiku.txt}
+
+\color{black}\vspace{0.5em}
+1. Will return of and Software
+\\2. I don't know what option \texttt{-E} does, it just says it does "PATTERN is an extended regular expression", whatever that means. Testing it out, it does still return both of and Software.
+\\3. Correct answer
+\\4. Search is case-insensitive, but that will still return Software.\end{addmargin}
+
+Apparently adding option \texttt{-E} will prevent the shell from trying to interpret what's inside the quotes.
+
+\texttt{\$ grep -E '\textsuperscript{$\wedge$}.o' haiku.txt} uses the \textsuperscript{$\wedge$} to anchor the match to the start of the line, the \texttt{.} to match a single character, and the \texttt{o} to match to an o.
+
+\newpage \begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+The script should return one file called \texttt{species.txt} containing a list of dates and the number of that species seen on each date. For example using the data shown above, \texttt{rabbit.txt} would contain:
+
+\vspace{-0.5em}\begin{verbatim}
+2013-11-05,22
+2013-11-06,19
+\end{verbatim}\vspace{-0.5em}
+
+\color{black}\vspace{-0.5em}
+\begin{verbatim}
+# Returns a file called examplespecies.txt containing a list of dates and the 
+number of times that species was seen.
+# Usage: $ bash species_datesseen.sh species directory 
+# e.g.   $ bash species_datesseen.sh rabbit /animal-counts/
+grep -w $1 -r $2 | cut -d : -f 2 | cut -d , -f 1,3 > $1.txt
+\end{verbatim}
+This script says to search the word "\$1" recursively in the "\$2" directory, get the second field (where fields are delimited by ":"), then get the first and third fields (where fields are delimited by ",") and print them to a text called "\$1.txt".
+\end{addmargin}
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+You and your friend, having just finished reading \textit{Little Women} by Louisa May Alcott, are in an argument. Of the four sisters in the book, Jo, Meg, Beth, and Amy, your friend thinks that Jo was the most mentioned. You, however, are certain it was Amy. Luckily, you have a file \\\texttt{LittleWomen.txt} containing the full text of the novel \\(\texttt{data-shell/writing/data/LittleWomen.txt}). Using a for loop, how would you tabulate the number of times each of the four sisters is mentioned?
+
+\color{black}\vspace{-0.5em}
+\textbf{Intention:} First I need how many times Amy appears in the text
+
+\textbf{Action:} \texttt{\$ grep -w Amy LittleWomen.txt}
+
+\textbf{Result:} Every line in which she appears. But I only want every instance, without the rest of the line, so I can count the words in that.
+
+{\subsubsection{\texorpdfstring{\underline{Error: Shell: Grepping Singular Words}}{}}\label{error:er18}
+\begin{itemize}
+  \item Expected above exercise to result in a list of found instances of searched word, but can only retrieve words in context of each line.
+  \item \texttt{\$ grep wc -w Amy LittleWomen.txt} doesn't work; \texttt{\$ grep -w Amy LittleWomen.txt | wc -w} doesn't work; I've been trying for an hour and looking through my notes and I have no idea why the grep has to include the context or how to stop it.
+  \item I'm cheating and looking at the solution.
+\end{itemize}
+\begin{itemize}
+\renewcommand{\labelitemi}{}
+\item \underline{Solution:}
+\renewcommand{\labelitemi}{$\bullet$}
+  \item Apparently, there's an option for -o that shows only the part of the line matching the grepped word. I have not been taught this option anywhere in the lesson so I will not assume I am supposed to be equipped to attempt exercises in future, and will check the solution if I don't immediately know the answer.
+  \item Although this is unlikely to save me without specifically knowing where I'm going wrong, I could also use a command like \texttt{\$ grep --help} to look through ideas for options that might be helpful. For many commands, this --help is a list of possible options without actually telling you what they do, but it might help you guess.
+\end{itemize}}
+
+
+
+The solution was:
+\vspace{-0.5em}\begin{verbatim}
+for sis in Jo Meg Beth Amy
+do
+	echo $sis:
+	grep -ow $sis LittleWomen.txt | wc -l
+done
+\end{verbatim}\end{addmargin}
+
+\textbf{Finding}
+
+\texttt{find} function is used to find files. \texttt{\$ find .} would find every single file and directory beginning with ".". Add \texttt{-type d} to find only directories, \texttt{-type f} to find only files, \texttt{-name '*.txt'} to find only files and directories containing .txt. (Note: '*.txt' is in quotes because asterisks are expanded before commands are run - without quotes you'll only get *.txts from the cwd.)
+
+\texttt{\$ wc -l \$(find . -name '*.txt')} would first \texttt{find} all files in the cwd named *.txt, then wordcount the lines of those.
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+The -v option to grep inverts pattern matching, so that only lines which do not match the pattern are printed. Given that, which of the following commands will find all files in /data whose names end in s.txt (e.g., animals.txt or planets.txt), but do not contain the word net? Once you have thought about your answer, you can test the commands in the \texttt{data-shell} directory.
+
+1. \texttt{find data -name '*s.txt' | grep -v net}
+\\2. \texttt{find data -name *s.txt | grep -v net}
+\\3. \texttt{grep -v "temp" \$(find data -name '*s.txt')}
+\\4. None of the above.
+
+\color{black}\vspace{0.5em}
+I think the only one that would work from \texttt{/data-shell/} will be (1). (2) would find only cwd filenames ending in s.txt and I don't know what the plan was with (3).
+\end{addmargin}
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+Write a short explanatory comment for the following shell script:
+
+\texttt{wc -l \$(find . -name '*.dat') | sort -n}
+
+\color{black}\vspace{0.5em}
+This script finds all files in the cwd ending in .dat, sorts them lexicographically, and displays a line count of each file.
+\end{addmargin}
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+The find command can be given several other criteria known as “tests” to locate files with specific attributes, such as creation time, size, permissions, or ownership. Use man find to explore these, and then write a single command to find all files in or below the current directory that are owned by the user ahmed and were modified in the last 24 hours.
+
+\color{black}\vspace{0.5em}
+\$ find . -type f -mtime -1 -user ahmed
+\end{addmargin}
+
+%"Intentions, Actions, Results"
 
 \newpage\section{Library of LaTeX Errors}
 \begin{itemize}
@@ -1150,8 +2099,15 @@ was undefined.
 \renewcommand{\labelitemi}{}
     \item \ref{error:er12} GUI/CLI Confusion
     \item \ref{error:er13} Shell: Command Not Found
+    \item \ref{error:er16} Shell: Does Not Print Or Loop
+    \item \ref{error:er17} Shell: Pipe Functionality
+    \item \ref{error:er18} Shell: Grepping Singular Words
 \end{itemize}
 
 \end{document}
+
+
+
+
 
 % commit details: what was added, deleted, changed, AND how it went
