@@ -36,7 +36,7 @@
 
 \tableofcontents
 
-\newpage\section{11.08.19 - Proof of Concept: Scoping Exercise I}
+\maketitle\section{11.08.19 - Proof of Concept: Scoping Exercise I}
 
 Doing the Scoping Exercise first because the other task is recommended to be tackled in groups.
 
@@ -341,7 +341,7 @@ Let’s allow for the argument that we judge merit based on earnings as quantifi
 Here is a spreadsheet of the top-earning films of 2018. 
 
 \vspace{1cm}
-\includegraphics[width=\textwidth]{Topfilms.png}
+\includegraphics[width=\textwidth]{imgtopfilms.png}
 
 \vspace{1em}
 \newpage
@@ -777,7 +777,7 @@ First command to try is \$ 1s.
     \item Typed \texttt{\$1s}, returned: \\\texttt{bash:1s:command not found}
     \item Using a space between doesn't help, doubling the \$ doesn't help. The guide is suggesting I mistyped the command.
     
-    \includegraphics[scale=0.8]{commandnotfound.PNG}
+    \includegraphics[scale=0.8]{imgcommandnotfound.PNG}
 \end{itemize}
 \begin{itemize}
 \renewcommand{\labelitemi}{}
@@ -928,7 +928,7 @@ Testing them out, I can see 8 also works, I forgot that shortcut always takes yo
 \vspace{0.5em}
 \textcolor{gray}{\underline{Exercise:}}
 \begin{center}
-\includegraphics[scale=1]{relativepathresolution.PNG}
+\includegraphics[scale=1]{imgrelativepathresolution.PNG}
 \end{center}
 
 Answer should be 4. Solution agrees.
@@ -937,7 +937,7 @@ Answer should be 4. Solution agrees.
 \textcolor{gray}{\underline{Exercise:}\vspace{0.5em}}
 \begin{center}
 \vspace{1em}
-\includegraphics[scale=1]{readingcomprehension.PNG}
+\includegraphics[scale=1]{imgreadingcomprehension.PNG}
 \end{center}
 
 I imagine 2 and 3 would work. 3 seems redundant.
@@ -1594,7 +1594,7 @@ $ for filename in *.dat
 worked, once the easy verbose way, and once the concise way.
 
 \begin{center}
-\includegraphics[scale=1]{usingecho.PNG}    
+\includegraphics[scale=1]{imgusingecho.PNG}    
 \end{center}
 
 The best part is that if the program is taking ages to run you can see what it's up to and have an idea if you have time to make a coffee.
@@ -2072,6 +2072,158 @@ The find command can be given several other criteria known as “tests” to loc
 \color{black}\vspace{0.5em}
 \$ find . -type f -mtime -1 -user ahmed
 \end{addmargin}
+
+\newpage\section{08.11.19 - Data Carpentry: OpenRefine}
+\subsection{\href{https://datacarpentry.org/openrefine-socialsci/02-working-with-openrefine/index.html}{\textbf{Working with OpenRefine}}}
+\color{gray}
+\underline{Questions}
+
+How can we bring our data into OpenRefine?
+
+How can we sort and summarize our data?
+
+How can we find and correct errors in our raw data?
+
+\underline{Objectives}
+
+Create a new OpenRefine project from a CSV file.
+
+Understand potential problems with file headers.
+
+Use facets to summarize data from a column.
+
+Use clustering to detect possible typing errors.
+
+Understand that there are different clustering algorithms which might give different results.
+
+Employ drop-downs to remove white spaces from cells.
+
+Manipulate data using previous steps with undo/redo.
+
+\color{black}
+
+\vspace{2em}
+\textbf{Facets}
+
+A facet is essentially a filter with extra ability to display info on the data, clean and edit data and tags, sort information.
+
+For instance, a text facet will count instances of each datum, a timeline facet will show a graph of the distribution of data over time, a numeric and scatterplot facets display graphs with drag and drop controls.
+
+Custom facets are a range of different types of facets. For instance, you could see counts of items inside each datum by using \texttt{Custom text facet} and typing \texttt{value.split(";")}, assuming your values are separated by semicolons. 
+
+Some of the default custom facets are:
+
+\begin{itemize}
+    \item Word facet - this breaks down text into words and counts the number of records each word appears in
+    \item Duplicates facet - this results in a binary facet of ‘true’ or ‘false’. Rows appear in the ‘true’ facet if the value in the selected column is an exact match for a value in the same column in another row
+    \item Text length facet - creates a numeric facet based on the length (number of characters) of the text in each row for the selected column. This can be useful for spotting incorrect or unusual data in a field where specific lengths are expected (e.g. if the values are expected to be years, any row with a text length more than 4 for that column is likely to be incorrect)
+    \item Facet by blank - a binary facet of ‘true’ or ‘false’. Rows appear in the ‘true’ facet if they have no data present in that column. This is useful when looking for rows missing key data.
+    
+
+\end{itemize}
+
+\newpage
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+1. Using faceting, find out how many different \texttt{interview\_date} values there are in the survey results.
+\\2. Is the column formatted as Text or Date?
+\\3. Use faceting to produce a timeline display for \texttt{interview\_date}. You will need to use Edit cells > Common transforms > To date to convert this column to dates.
+\\4. During what period were most of the interviews collected?
+
+\color{black}\vspace{1em}
+1. 19 choices
+\\2. As text
+\\3. The timeline shows data collection was likely put on pause over the Christmas period.
+\\4. Most of the interviews were collected in November.
+
+\end{addmargin}
+
+\vspace{1.5em}
+\textbf{Clustering}
+
+The cluster button merges data categories based on similar spelling, ngram appearance, or metaphony. It doesn't do it automatically so it's safe to check what will merge first.
+
+\textbf{Transform}
+
+\texttt{Edit Cells > Transform...} allows you to mass edit all data of the one category. For instance, if you type \texttt{value.replace("[","")}, it will replace all left square brackets in the values with nothing.
+
+\vspace{1.5em}
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+1. Use this same strategy to remove the single quote marks ('), the right square brackets (]), and spaces from the \texttt{items\_owned} column.
+\\2. Which two items are the most commonly owned? Which are the two least commonly owned?
+\\3. Perform the same clean up steps and customized text faceting for the \texttt{months\_lack\_food} column. Which month(s) were farmers more likely to lack food?
+\\4. Perform the same clean up steps for \texttt{months\_no\_water, liv\_owned, res\_change}, and the \texttt{no\_food\_mitigation} columns. Hint: To reuse a GREL command, click the History tab and then click Reuse next to the command you would like to apply to that column.
+
+\color{black}\vspace{1em}
+1. \texttt{value.replace("'", "")
+\\value.replace("]", "")
+\\value.replace(" ", "")}
+\\2. Most commonly owned items were mobile phone and radio, least commonly owned were a computer or a car.
+\\3. Sorting by count shows that farmers were most likely to lack food over November and surrounding months.
+\\4. That was a lot of clicking. Hopefully there'll be a way to apply all those \texttt{value.replace}s at once.
+
+\end{addmargin}
+
+\textbf{Trimming whitespace}
+
+Trim spaces from the beginning and end of entries under common transforms.
+
+\newpage
+\subsection{\href{https://datacarpentry.org/openrefine-socialsci/03-filter-sort/index.html}{\textbf{Filtering and Sorting with OpenRefine}}}
+\color{gray}
+\underline{Questions}
+
+How can we select only a subset of our data to work with?
+
+How can we sort our data?
+
+\underline{Objectives}
+
+Filter to a subset of rows by text filter or include/exclude.
+
+Sort table by a column.
+
+Sort by multiple columns.
+
+\color{black}
+
+\vspace{2em}
+\textbf{Filtering}
+
+Clicking \texttt{Text filter} allows you to pick out the entries that contain text of your choosing
+
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+1. What roof types are selected by filtering \texttt{mabat}?
+\\2. How would you restrict this to only one of the roof types?
+
+\color{black}\vspace{1em}
+1. Mabatisloping and mabatipitched
+\\2. Use at least mabatip or mabatis
+\\ You can also click include on the entry you want
+
+\color{gray}
+\underline{Exercise:}
+We discovered in an earlier lesson that the value for one of the village entries was given as 49. This is clearly wrong. By looking at the GPS coordinates for the entries of the other villages can we decide what village the data in that column was collected from?
+
+\color{black}\vspace{1em}
+Sorting by latitude and longitude can show that the village is amongst the other lats and longs for Chirodzo. If this was unclear (like it was between Chirodzo and another village), the interview date can be used to confirm if interviews were conducted in Chirodzo on that date.
+\end{addmargin}
+
+
+
+
+
+
+
+
 
 %"Intentions, Actions, Results"
 

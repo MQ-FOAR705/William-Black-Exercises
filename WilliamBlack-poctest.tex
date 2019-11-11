@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{focusframe}
+
+% BBS Testing in-document 
+
+% \newcommand{\detailtexcount}[1]{%
+%   \immediate\write18{texcount -merge -sum -q #1.tex output.bbl > #1.wcdetail }%
+%   \verbatiminput{#1.wcdetail}%
+% }
+ 
+% \newcommand{\quickwordcount}[1]{%
+%   \immediate\write18{texcount -1 -sum -merge -q #1.tex output.bbl > #1-words.sum }%
+%   \input{#1-words.sum} words%
+% }
+ 
+% \newcommand{\quickcharcount}[1]{%
+%   \immediate\write18{texcount -1 -sum -merge -char -q #1.tex output.bbl > #1-chars.sum }%
+%   \input{#1-chars.sum} characters (not including spaces)%
+% }
+
+\newcommand{\echofromshell}[1]{%
+    %Write output of command into file
+    \immediate\write18{echo "hello world #1">test.txt}
+    %this is going to echo 
+    %Write file into TeX    
+    \input{test.txt}
+}
+
+
+\newcommand{\texcountnobibsinglefile}[1]{%
+    %https://app.uio.no/ifi/texcount/download.php?doc=TeXcount_3_1_1.pdf
+    % -1 Same as specifying -brief and -total, and ensures there will only be one line of output. If used with -sum, the output will only be the total number.
+    % -merge Merge included files into document (in place).
+    % -quiet no extra output
+    % not including the bibliography
+    \immediate\write18{texcount -brief -total -sum -merge -quiet #1.tex > #1-words.sum }%
+    \input{#1-words.sum} words
+}
+
+\title{\textbf{Animation Translation of the Japanese Nation}}
+\date{Date of last edit: \today}
+\author{William Black 42920477}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+\begin{document}
+
+\tableofcontents
+
+\textbf{\maketitle}
+
+\frsect{Background \& Literature Review} {0/1200}
+
+\frsubsect{Leading Paragraph}{0/100}
+
+Translation is a tricky business, you see, ever since time immemorial translators have wondered etc. %\lipsum[1] 
+
+\echofromshell{muahahah}
+\texcountnobibsinglefile{WilliamBlack-poctest} % it is important to note that it doesn't count words as a function of \lipsum
+% %%TC:ignore
+% \quickwordcount{WilliamBlack-poctest}
+
+% \quickcharcount{WilliamBlack-poctest}
+
+% \detailtexcount{WilliamBlack-poctest}
+% %%TC:endignore
+
+\frsubsect{Theme Background - identify gap}{0/500}
+\frsubsubsect{- what's a translation}{}
+
+A translation transforms the devil into el diablo. %\lipsum[1]
+
+\frsubsubsect{- what's equivalence}{}
+
+Equivalence is about getting the word right and also getting the vibe right. %\lipsum[1]
+
+\frsubsubsect{- what's a sign}{}
+\frsubsubsect{- what's a connotative sign}{}
+\frsubsubsect{- what's the difference between connotative/denotative signs}{}
+
+\frsect{Aims}{0/300}
+\frsubsect{Research Aims}{}
+\frsubsect{Project Scope}{}
+\frsubsect{Limitations}{}
+
+\end{document}
