@@ -2149,7 +2149,7 @@ The cluster button merges data categories based on similar spelling, ngram appea
 
 \texttt{Edit Cells > Transform...} allows you to mass edit all data of the one category. For instance, if you type \texttt{value.replace("[","")}, it will replace all left square brackets in the values with nothing.
 
-\vspace{1.5em}
+\vspace{1em}
 \begin{addmargin}[1cm]{0cm}
 \color{gray}
 \underline{Exercise:}
@@ -2169,6 +2169,7 @@ The cluster button merges data categories based on similar spelling, ngram appea
 
 \end{addmargin}
 
+\vspace{1em}
 \textbf{Trimming whitespace}
 
 Trim spaces from the beginning and end of entries under common transforms.
@@ -2192,7 +2193,7 @@ Sort by multiple columns.
 
 \color{black}
 
-\vspace{2em}
+\vspace{1em}
 \textbf{Filtering}
 
 Clicking \texttt{Text filter} allows you to pick out the entries that contain text of your choosing
@@ -2204,18 +2205,450 @@ Clicking \texttt{Text filter} allows you to pick out the entries that contain te
 1. What roof types are selected by filtering \texttt{mabat}?
 \\2. How would you restrict this to only one of the roof types?
 
-\color{black}\vspace{1em}
+\color{black}\vspace{0.5em}
 1. Mabatisloping and mabatipitched
-\\2. Use at least mabatip or mabatis
-\\ You can also click include on the entry you want
+\\2. Use at least mabatip or mabatis. You can also click include on the entry you want
 
 \color{gray}
 \underline{Exercise:}
+
 We discovered in an earlier lesson that the value for one of the village entries was given as 49. This is clearly wrong. By looking at the GPS coordinates for the entries of the other villages can we decide what village the data in that column was collected from?
 
-\color{black}\vspace{1em}
+\color{black}\vspace{0.5em}
 Sorting by latitude and longitude can show that the village is amongst the other lats and longs for Chirodzo. If this was unclear (like it was between Chirodzo and another village), the interview date can be used to confirm if interviews were conducted in Chirodzo on that date.
 \end{addmargin}
+
+\newpage\section{12.11.19 - Data Carpentry: OpenRefine}\subsection{\href{https://datacarpentry.org/openrefine-socialsci/04-numbers/index.html}{\textbf{Examining Numbers in OpenRefine}}}
+\color{gray}
+\underline{Questions}
+
+How can we convert a column from one data type to another?
+
+How can we visualize relationships among columns?
+
+\underline{Objectives}
+
+Transform a text column into a number column.
+
+Identify and modify non-numeric values in a column using facets.
+
+\color{black}
+\vspace{0.7em}
+\textbf{Transforming to numbers}
+
+Clicking \texttt{Edit cells > Common transforms… > To number} turns the cells in the column from lexicographic numeral data to numeric numeral data. This allows numeric manipulation and sorting.
+
+\vspace{0.5em}
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+Transform three more columns, \texttt{no\_members, yrs\_liv}, and \texttt{buildings\_in\_compound}, from text to numbers. Can all columns be transformed to numbers? - Try it with \texttt{village} for example.
+
+\color{black}\vspace{0.5em}
+Transformation is allowed but there is no numeric data to transform. A notification observes that the change was applied (but to zero cells).
+
+\color{gray}
+\underline{Exercise:}
+
+1. For a column you transformed to numbers, edit one or two cells, replacing the numbers with text (such as abc) or blank (no number or text).
+\\2. Use the pulldown menu to apply a numeric facet to the column you edited. The facet will appear in the left panel.
+\\3. Notice that there are several checkboxes in this facet: \texttt{Numeric, Non-numeric, Blank}, and \texttt{Error}. Below these are counts of the number of cells in each category. You should see checks for \texttt{Non-numeric} and \texttt{Blank} if you changed some values.
+\\4. Experiment with checking or unchecking these boxes to select subsets of your data.
+
+\color{black}\vspace{1em}
+Selecting these subsets would be useful for data cleaning. Checking where fields have been left blank or have a non-numerical entry can avoid errors in maths like resulting averages.
+\end{addmargin}
+
+\vspace{-0.5em}\subsection{\href{https://datacarpentry.org/openrefine-socialsci/05-scripts/index.html}{\textbf{Using Scripts}}}
+\color{gray}
+\underline{Questions}
+
+How can we document the data-cleaning steps we’ve applied to our data?
+
+How can we apply these steps to additional data sets?
+
+\underline{Objectives}
+
+Describe how OpenRefine generates JSON code representing the work done in an analysis session.
+
+Demonstrate ability to export this JSON code from OpenRefine.
+
+Demonstrate ability to import a JSON code file to apply the analysis to another dataset.
+
+\color{black}
+\vspace{0.7em}
+\textbf{JSON scripts}
+
+While you clean and editing, OpenRefine is saving every change in a JavaScript Object Notation JSON script. If you have 20 files that need the same cleaning/fixing typos/changing blanks to zero/etc., the JSON script can be run on all of them.
+
+In the \texttt{Undo / Redo} section, click \texttt{Extract...}, and select the steps that you want to apply to other datasets by clicking the check boxes. Save the code as a plain .txt file. Click \texttt{Apply...} to run it in another file.
+
+\vspace{-0.5em}\subsection{\href{https://datacarpentry.org/openrefine-socialsci/06-saving/index.html}{\textbf{Exporting and Saving Data from OpenRefine}}}
+\color{gray}
+\underline{Questions}
+
+How can we save and export our cleaned data from OpenRefine?
+
+\underline{Objectives}
+
+Save an OpenRefine project.
+
+Export cleaned data from an OpenRefine project.
+
+\color{black}
+\vspace{0.7em}
+\textbf{Saving and exporting}
+
+OpenRefine saves continuously. To share data/cleaning steps to a collaborator or publisher, export the project. 
+
+\vspace{0.5em}
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+1. Click the Export button in the top right and select Export project.
+\\2. After you have expanded the file look at the files that appear in this folder. What files are here? What information do you think these files contain?.
+
+\color{black}\vspace{0.5em}
+A "history" folder which probably contains the log of changes made, and the data file. 
+
+\end{addmargin}
+
+\vspace{-0.5em}\subsection{\href{https://datacarpentry.org/openrefine-socialsci/05-scripts/index.html}{\textbf{Using Scripts}}}
+\color{gray}
+\underline{Questions}
+
+How can we document the data-cleaning steps we’ve applied to our data?
+
+How can we apply these steps to additional data sets?
+
+\underline{Objectives}
+
+Describe how OpenRefine generates JSON code representing the work done in an analysis session.
+
+Demonstrate ability to export this JSON code from OpenRefine.
+
+Demonstrate ability to import a JSON code file to apply the analysis to another dataset.
+
+\color{black}
+\vspace{0.7em}
+\textbf{JSON scripts}
+
+While you clean and editing, OpenRefine is saving every change in a JavaScript Object Notation JSON script. If you have 20 files that need the same cleaning/fixing typos/changing blanks to zero/etc., the JSON script can be run on all of them.
+
+In the \texttt{Undo / Redo} section, click \texttt{Extract...}, and select the steps that you want to apply to other datasets by clicking the check boxes. Save the code as a plain .txt file. Click \texttt{Apply...} to run it in another file.
+
+\textbf{Using online resources to get help with OpenRefine}
+
+\href{https://github.com/OpenRefine/OpenRefine/wiki/Documentation-For-Users}{OpenRefine documentation Wiki site}
+
+\newpage\section{12.11.19 - Data Carpentry: R for Social Scientist}
+
+\subsection{\href{https://datacarpentry.org/r-socialsci/00-intro/index.html}{\textbf{Before we Start
+}}}
+\color{gray}
+\underline{Questions}
+
+How to find your way around RStudio?
+
+How to interact with R?
+
+How to manage your environment?
+
+How to install packages?
+
+\underline{Objectives}
+
+Install latest version of R.
+
+Install latest version of RStudio.
+
+Navigate the RStudio GUI.
+
+Install additional packages using the packages tab.
+
+Install additional packages using R code.
+
+\color{black}
+\vspace{1em}
+
+\textbf{What is R}
+
+R is a programming language, but lots of people call IDEs (Integrated Development Environments) that are used to interact with the R software "R" too. It is open source and widely supported and troubleshot in the greater community.
+
+R is designed for data analysis of spreadsheets, image analysis, time series, population genetics, a wide array of data types.
+
+R finds results for your analysis based on your scripts rather than clicking, so you can be assured of a reproducible process if you add data to be analysed, and mistakes can be seen in code rather than guessed ad hoc. 
+
+\textbf{What is RStudio}
+
+RStudio is an IDE. Using an IDE we can write code, navigate the computer, inspect variables, generate plots, version control, develop packages, and more.
+
+\vspace{0.5em}
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+1. Under the File menu, click \texttt{New project > New directory > New project}
+\\2. Enter a name for this directory and choose a convenient location for it. This will be your working directory (e.g. \texttt{\textasciitilde/data-carpentry})
+\\3. Click on \texttt{Create project}
+\\4. Create a new file where we will type our scripts. Go to \texttt{File > New File > R script}. Click the save icon on your toolbar and save your script as "\texttt{script.R}”.
+
+\color{black}\vspace{0.5em}
+
+No errors.
+
+\vspace{0.5em}
+\color{gray}
+\underline{Exercise:}
+
+Use the install option from the packages tab to install the 'tidyverse' package.
+
+\color{black}\vspace{0.5em}
+
+No errors.
+\end{addmargin}
+
+\newpage\subsection{\href{https://datacarpentry.org/r-socialsci/01-intro-to-r/index.html}{Introduction to R}}
+
+\color{gray}
+\underline{Questions}
+
+What data types are available in R?
+
+What is an object?
+
+How can values be initially assigned to variables of different data types?
+
+What arithmetic and logical operators can be used?
+
+How can subsets be extracted from vectors and data frames?
+
+How does R treat missing values?
+
+How can we deal with missing values in R?
+
+\underline{Objectives}
+
+Define the following terms as they relate to R: object, assign, call, function, arguments, options.
+
+Assign values to objects in R.
+
+Learn how to name objects.
+
+Use comments to inform script.
+
+Solve simple arithmetic operations in R.
+
+Call functions and use arguments to change their default options.
+
+Inspect the content of vectors and manipulate their content.
+
+Subset and extract values from vectors.
+
+Analyze vectors with missing data.
+
+\color{black}
+\vspace{1em}
+
+\textbf{Creating objects}
+
+Objects (or "variables" in other languages) are words that have values assigned to it with the assignment operator \texttt{<-} (alt+-).
+
+\vspace{0.5em}
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+Objects can be used for arithmetic. Objects' values can be changed by assigning them new ones. This means that assigning a value to one object does not change the values of other objects.
+
+1. Store the plot’s area in acres in a new object, \texttt{area\_acres}.
+\\\texttt{area\_acres <- 2.47 * area\_hectares}
+\\2. Then, change \texttt{area\_hectares} to 50.
+
+What do you think is the current content of the object \texttt{area\_acres}? 123.5 or 6.175?
+
+\color{black}\vspace{0.5em}
+
+``Assigning a value to one object does not change the values of other objects." So it will still be 6.175. The \texttt{environment} pane also shows what values are currently assigned.
+
+\end{addmargin}
+
+\textbf{Comments}
+
+Use \texttt{\#} to make comments. Use Ctrl+Shift+C to comment/uncomment entire selections at a time. 
+
+\vspace{0.5em}
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+Create two variables \texttt{length} and \texttt{width} and assign them values. Create a third variable area and give it a value based on the current values of \texttt{length} and \texttt{width}. Show that changing the values of either \texttt{length} and \texttt{width} does not affect the value of area.
+
+\color{black}\vspace{0.5em}
+
+\includegraphics[scale=0.8]{imgrvariables.PNG}
+\end{addmargin}
+
+\textbf{Functions and their arguments}
+
+Functions work roughly the same way they do in LaTeX, except using brackets after the function to assign arguments.
+
+Use \texttt{args(nameoffunction)} to see what arguments the function can take. If you separate the values with commas RStudio will assume you meant arguments in the order they appear in, but you can specify arguments by name too. Use \texttt{?nameoffunction} for more detailed help.
+
+\begin{verbatim}
+    round(3.14159, 2)
+    [1] 3.14
+
+    round(digits = 2, x = 3.14159)
+    [1] 3.14
+\end{verbatim}
+
+\textbf{Vectors}
+
+A vectors is a set of combined values set to an object with \texttt{c()}. The values can be numeric, character, integer, logical, complex, and raw. (Complex means 3 + 4i, for example, and raw is for a "bitstream" whatever that is) e.g. \texttt{hh\_members <- c(3, 7, 10, 6)} or \texttt{respondent\_wall\_type <- c("muddaub", "burntbricks", "sunbricks")}. The quotes are needed because otherwise R will think they're objects. This means you can use vectors as objects, too:
+\begin{verbatim}
+    possessions <- c("bicycle", "radio", "television")
+    possessions <- c(possessions, "mobile_phone") # add to the end of the vector
+    possessions <- c("car", possessions) # add to the beginning of the vector
+\end{verbatim}
+
+Use \texttt{length(vectorname)} to find out how many items are in the vector. Use \texttt{typeof(vectorname)} to find out what type it is. \texttt{str(vectorname)} to see the whole structure of the vector - also available in the Environment pane.
+
+\vspace{0.5em}
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+We’ve seen that atomic vectors can be of type character, numeric (or double), integer, and logical. But what happens if we try to mix these types in a single vector? Why do you think that happens? 
+
+\color{black}\vspace{0.5em}
+
+Atomic vectors can only be one class. The different types take the common denominator as the type. TRUE/FALSE become 1 and 0 for numeric data, and numbers become a type of character. 
+
+\end{addmargin}
+
+\textbf{Subsetting vectors}
+
+To extract values from a vector, type the indices you want in square brackets:
+
+\vspace{-0.5em}\begin{verbatim}
+    respondent_wall_type <- c("muddaub", "burntbricks", "sunbricks")
+    respondent_wall_type[2]
+        [1] "burntbricks"
+    respondent_wall_type[c(3, 2)]
+        [1] "sunbricks"   "burntbricks"
+\end{verbatim}
+
+\textbf{Conditional vectors}
+
+You can also use logical vectors to extract values
+\vspace{-0.5em}\begin{verbatim}
+    hh_members <- c(3, 7, 10, 6)
+    hh_members[c(TRUE, FALSE, TRUE, TRUE)]
+        [1]  3 10  6
+\end{verbatim}
+\vspace{-0.5em}
+You'd never want that though, it'd usually be the computer working out trues and falses for you. 
+\vspace{-0.5em}\begin{verbatim}
+    hh_members > 5 
+        [1] FALSE  TRUE  TRUE  TRUE
+    hh_members[hh_members > 5]
+        [1]  7 10 6
+\end{verbatim}
+\vspace{-0.5em}
+You can make multiple tests with \texttt{\&} (both conditions are true), or \texttt{|} (at least one condition is true). Use \texttt{\%in\%} to test if the string is found in the vector.
+\vspace{-0.5em}\begin{verbatim}
+    hh_members[hh_members < 3 | hh_members > 5]
+        [1]  7 10  6
+    hh_members[hh_members >= 7 & hh_members == 3]
+        numeric(0)
+    possessions <- c("car", "bicycle", "radio", "television", "mobile_phone")
+    possessions[possessions == "car" | possessions == "bicycle"]
+        [1] "car"     "bicycle"
+    possessions %in% c("car", "bicycle", "motorcycle", "truck", "boat")
+        [1]  TRUE  TRUE FALSE FALSE FALSE
+    possessions[possessions %in% c("car", "bicycle", "motorcycle", "truck", "boat")]
+        [1] "car"     "bicycle"
+\end{verbatim}
+\vspace{-0.5em}
+
+\newpage \textbf{Missing data}
+
+It's uncommon for programming languages to understand missing data, but R was designed for data analysis. Missing data is represented as \texttt{NA}, which will also be what displays if your function is being used on operations that include missing values. Add the argument \texttt{na.rm=TRUE} to calculate after removing missing values. Add \texttt{!is.na()} to isolate values other than NA. (\texttt{is.na()} would isolate NAs.)
+
+\vspace{-0.5em}\begin{verbatim}
+    rooms <- c(2, 1, 1, NA, 4)
+    mean(rooms)
+        [1] NA
+    max(rooms)
+        [1] NA
+    mean(rooms, na.rm = TRUE)
+        [1] 2
+    max(rooms, na.rm = TRUE)
+        [1] 4
+    rooms[!is.na(rooms)]
+        [1] 2 1 1 4
+\end{verbatim}\vspace{-0.5em}
+
+\vspace{0.5em}
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+1. Using this vector of rooms, create a new vector with the NAs removed.
+
+\texttt{ rooms <- c(1, 2, 1, 1, NA, 3, 1, 3, 2, 1, 1, 8, 3, 1, NA, 1)}
+
+2. Use the function median() to calculate the median of the rooms vector.
+
+3. Use R to figure out how many households in the set use more than 2 rooms for sleeping.
+
+\color{black}\vspace{0.5em}
+
+{\subsubsection{\texorpdfstring{\underline{Error: R: Multiple Functions}}{}}\label{error:er19}
+\begin{itemize}
+  \vspace{-0.5em}\item \textbf{Intention:} To nest functions within a single command
+  \vspace{-0.5em}\item \textbf{Action:} \texttt{rooms \%in\% [rooms >2]}
+  \vspace{-0.5em}\item \textbf{Result:} \texttt{Error: unexpected '[' in "rooms \%in\% ["}
+\end{itemize}
+\begin{itemize}
+\renewcommand{\labelitemi}{}
+\item \underline{Solution:}
+\renewcommand{\labelitemi}{$\bullet$}
+  \item \textbf{Intention:} I need to create new objects with updated values in order to perform functions on them.
+  \item \textbf{Action:} \vspace{-0.5em}\begin{verbatim}
+      > rooms[!is.na(rooms)]
+            [1] 1 2 1 1 3 1 3 2 1 1 8 3 1 1
+        > roomswona <- rooms[!is.na(rooms)]
+        > median(roomswona)
+            [1] 1
+        > roomswona[roomswona>2]
+            [1] 3 3 8 3
+        > roomsovertwo <- roomswona[roomswona>2]
+        > length(roomsovertwo)
+            [1] 4
+  \end{verbatim}
+  \item \textbf{Result:} By assigning objects to each step of the process, I can perform functions on updated lists. And it's probably better not to tamper with your original list anyway - you may need it in its original form later.
+\end{itemize}}
+
+\end{addmargin}
+
+\newpage\section{}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2254,6 +2687,7 @@ Sorting by latitude and longitude can show that the village is amongst the other
     \item \ref{error:er16} Shell: Does Not Print Or Loop
     \item \ref{error:er17} Shell: Pipe Functionality
     \item \ref{error:er18} Shell: Grepping Singular Words
+    \item \ref{error:er19} R: Multiple Functions
 \end{itemize}
 
 \end{document}
@@ -2263,3 +2697,34 @@ Sorting by latitude and longitude can show that the village is amongst the other
 
 
 % commit details: what was added, deleted, changed, AND how it went
+
+% CODESUBSECTIONCODE
+\subsection{\href{http://www.abc.com}{\textbf{Page Title}}}
+\color{gray}
+\underline{Questions}
+
+
+
+\underline{Objectives}
+
+
+
+\color{black}
+\vspace{1em}
+
+
+
+\vspace{0.5em}
+\begin{addmargin}[1cm]{0cm}
+\color{gray}
+\underline{Exercise:}
+
+1. 
+\\2. 
+
+\color{black}\vspace{0.5em}
+
+1.
+\\2.
+
+\end{addmargin}

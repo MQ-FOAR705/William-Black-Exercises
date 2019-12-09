@@ -78,7 +78,7 @@ Create macro that applies that formatting to all section headings.
 
 This might look something roughly like 
 \begin{verbatim}
-    \newcommand{\framesect}{\section{\insertformattinghere{#1}}}
+    \newcommand{\framesect}[1]{\section{\insertformattinghere{#1}}}
     \begin{document}
     \framesect{Introduction}
 \end{verbatim}
@@ -102,7 +102,7 @@ If multiple macros cannot co-exist peacefully or time constraints do not allow c
 
 Assuming the formatting tests went smoothly, the process should be mostly repeatable or even extended to the requirements of word counting. If a macro was unable to be created, these tests should still apply to whatever process was used as an alternative.
 
-\underline{Test A: (Testing Duties 1, 2, 3, 4}
+\underline{Test A: (Testing Duties 1, 2, 3, 4)}
 
 Add word count goal to formatting macro.
 
